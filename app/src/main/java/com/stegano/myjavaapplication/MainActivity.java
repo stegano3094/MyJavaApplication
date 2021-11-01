@@ -3,12 +3,16 @@ package com.stegano.myjavaapplication;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+
+import com.google.gson.Gson;
+import com.stegano.myjavaapplication.dto.UserDTO;
 
 public class MainActivity extends BaseActivity {
     public Button loginBtn;
@@ -50,6 +54,16 @@ public class MainActivity extends BaseActivity {
     @Override
     void setValues() {
 
+        // Gson 사용방법 (dto/UserDTO 파일 참조)
+        String json = "{\"name\":\"식빵\", \"age\":31, \"city\":\"New York\"}";
+        Gson gson = new Gson();
+        UserDTO userDTO = gson.fromJson(json, UserDTO.class);
+
+        if(BuildConfig.DEBUG) {
+            Log.d("MainActivity", userDTO.getCity());
+            Log.d("MainActivity", userDTO.getName());
+            Log.d("MainActivity", ""+userDTO.getAge());
+        }
     }
 
     @Override

@@ -18,6 +18,7 @@
         android:id="@+id/emailEdt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/main_font"
         android:inputType="textEmailAddress"
         android:hint="이메일 입력" />
 
@@ -31,6 +32,7 @@
         android:id="@+id/passwordEdt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/main_font"
         android:inputType="textPassword"
         android:hint="비밀번호 입력" />
 
