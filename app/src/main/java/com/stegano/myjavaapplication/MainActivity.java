@@ -66,23 +66,6 @@ public class MainActivity extends BaseActivity {
 
         String url = "https://www.google.co.kr";
         sendRequest(url);
-
-        // 파이어베이스에서 현재 토큰 가져오기
-        FirebaseMessaging.getInstance().getToken()
-                .addOnCompleteListener(new OnCompleteListener<String>() {
-                    @Override
-                    public void onComplete(@NonNull Task<String> task) {
-                        if (!task.isSuccessful()) {
-                            Log.w(TAG, "Fetching FCM registration token failed", task.getException());
-                            return;
-                        }
-
-                        // Get new FCM registration token
-                        String token = task.getResult();
-                        Log.d(TAG, "token : " + token);
-                        Toast.makeText(MainActivity.this, "토큰 : " + token, Toast.LENGTH_SHORT).show();
-                    }
-                });
     }
 
     @Override
@@ -143,18 +126,17 @@ public class MainActivity extends BaseActivity {
 
     @Override
     void setValues() {
-
         // Gson 사용방법 (dto/UserDTO 파일 참조)
         String json = "{\"name\":\"식빵\", \"age\":31, \"city\":\"New York\"}";
         Gson gson = new Gson();
         UserDTO userDTO = gson.fromJson(json, UserDTO.class);
 
-        if(BuildConfig.DEBUG) {
+        if (BuildConfig.DEBUG) {
             Log.d("MainActivity", userDTO.getCity());
             Log.d("MainActivity", userDTO.getName());
-            Log.d("MainActivity", ""+userDTO.getAge());
+            Log.d("MainActivity", "" + userDTO.getAge());
         }
-        }
+    }
 
     @Override
     public void onConfigurationChanged(@NonNull Configuration newConfig) {
