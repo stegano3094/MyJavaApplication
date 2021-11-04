@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "976097067941",
+    "project_id": "myjavaapplication-794a3",
+    "storage_bucket": "myjavaapplication-794a3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:976097067941:android:df7a96e1ff51ab1c601e4c",
+        "android_client_info": {
+          "package_name": "com.stegano.myjavaapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "976097067941-63hic14e2pq106eg6ha612nulkbv4egr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnbKFRBpbUeDPCi8-YltKrlYaZ_tOrbuc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "976097067941-63hic14e2pq106eg6ha612nulkbv4egr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

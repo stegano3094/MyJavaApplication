@@ -13,21 +13,36 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyJavaApplication"
         android:usesCleartextTraffic="true">
+
+        <service
+            android:name=".service.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
         <activity
             android:name=".ViewStoreDetailActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".TestActivity"
             android:exported="true"
-            android:screenOrientation="portrait"/>  <!-- 세로방향 고정 -->
+            android:screenOrientation="portrait" /> <!-- 세로방향 고정 -->
         <activity
             android:name=".MainActivity"
-            android:exported="true"
-            android:configChanges="orientation|screenSize|keyboardHidden">  <!-- 방향 회전 시 데이터유지 -->
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:exported="true"> <!-- 방향 회전 시 데이터유지 -->
         </activity>
     </application>
 

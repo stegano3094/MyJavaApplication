@@ -12,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.bumptech.glide.Glide;
+import com.squareup.picasso.Picasso;
 import com.stegano.myjavaapplication.R;
 import com.stegano.myjavaapplication.datas.Store;
 
@@ -50,6 +51,11 @@ public class PizzaStoreAdapter extends ArrayAdapter<Store> {
                 .load(data.getLogoUrl())
                 .error(R.drawable.logo_main)
                 .into(pizzaStoreLogoImg);
+        // Glide와 Picasso는 비슷하게 사용가능함
+//        Picasso.get()
+//                .load(data.getLogoUrl())
+//                .error(R.drawable.logo_main)
+//                .into(pizzaStoreLogoImg);
 
         return tempRow;
     }
