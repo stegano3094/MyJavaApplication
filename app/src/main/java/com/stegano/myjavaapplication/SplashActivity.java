@@ -35,19 +35,16 @@ public class SplashActivity extends BaseActivity {
         setContentView(R.layout.activity_splash);
 
         splashTextView = findViewById(R.id.splashTextView);
-        splashTextView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                try {
-                    Thread.sleep(2000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                Intent intent = new Intent(mContext, MainActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        });
+
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        Intent intent = new Intent(mContext, MainActivity.class);
+        startActivity(intent);
+        finish();
     }
 
     @Override

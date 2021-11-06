@@ -9,46 +9,31 @@
     android:layout_margin="20dp"
     android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="이메일" />
-
-    <EditText
-        android:id="@+id/emailEdt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/main_font"
-        android:inputType="textEmailAddress"
-        android:hint="이메일 입력" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="비밀번호"
-        android:layout_marginTop="15dp" />
-
-    <EditText
-        android:id="@+id/passwordEdt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/main_font"
-        android:inputType="textPassword"
-        android:hint="비밀번호 입력" />
-
     <Button
-        android:id="@+id/loginBtn"
+        android:id="@+id/nextActivityBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="로그인" />
-
-    <TextView
-        android:id="@+id/resultTxt"
+        android:text="다음 화면으로1" />
+    <Button
+        android:id="@+id/nextActivityBtn2"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:scrollbars="vertical"
-        android:text="TextView" />
+        android:layout_height="wrap_content"
+        android:text="TestActivity 화면으로"
+        android:textAllCaps="false"/>
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/resultTxt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/hs_new"
+            android:scrollbars="vertical"
+            android:text="TextView" />
+
+    </ScrollView>
 
 </LinearLayout>

@@ -40,13 +40,5 @@ public class TestActivity extends BaseActivity {
 
     @Override
     void setValues() {
-        // 뷰페이저
-        ViewPager mainViewPager = findViewById(R.id.mainViewPager);
-        MainViewPagerAdapter mvpa = new MainViewPagerAdapter(getSupportFragmentManager());
-        mainViewPager.setAdapter(mvpa);
-
-        // 탭레이아웃
-        TabLayout mainTabLayout = (TabLayout) findViewById(R.id.mainTabLayout);
-        mainTabLayout.setupWithViewPager(mainViewPager);
     }
 }

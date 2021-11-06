@@ -19,9 +19,6 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.messaging.FirebaseMessaging;
 import com.google.gson.Gson;
 import com.stegano.myjavaapplication.api.API_RetrofitService;
 import com.stegano.myjavaapplication.datas.AppHelper;
@@ -40,9 +37,8 @@ import retrofit2.Retrofit;
 public class MainActivity extends BaseActivity {
     private static final String TAG = "MainActivity";
 
-    public Button loginBtn;
-    public EditText emailEdt;
-    public EditText passwordEdt;
+    public Button nextActivityBtn;
+    public Button nextActivityBtn2;
     public TextView resultTxt;
 
 
@@ -63,21 +59,25 @@ public class MainActivity extends BaseActivity {
         if(AppHelper.requestQueue != null) {
             AppHelper.requestQueue = Volley.newRequestQueue(mContext);  // 큐 생성
         }
-
-        String url = "https://www.google.co.kr";
-        sendRequest(url);
     }
 
     @Override
     void setupEvents() {
-        loginBtn = (Button) findViewById(R.id.loginBtn);
-        emailEdt = (EditText) findViewById(R.id.emailEdt);
-        passwordEdt = (EditText) findViewById(R.id.passwordEdt);
+        // nextActivityBtn 버튼 클릭 시 TabLayoutAndViewPagerActivity 화면으로 이동
+        nextActivityBtn = findViewById(R.id.nextActivityBtn);
+        nextActivityBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(mContext, TabLayoutAndViewPagerActivity.class);
+            startActivity(intent);
+        });
 
+        nextActivityBtn2 = findViewById(R.id.nextActivityBtn2);
+        nextActivityBtn2.setOnClickListener(v -> {
+            Intent intent = new Intent(mContext, TestActivity.class);
+            startActivity(intent);
+        });
+
+        // 레트로핏을 이용하여 텍스트뷰에 결과 넣기
         resultTxt = (TextView) findViewById(R.id.resultTxt);
-        resultTxt.setMovementMethod(new ScrollingMovementMethod());
-        resultTxt.getOverScrollMode();
-
         Retrofit retrofit = RetrofitFactory.createRetrofit("https://jsonplaceholder.typicode.com/");
         API_RetrofitService api_retrofitService = retrofit.create(API_RetrofitService.class);
         Call<List<PostData>> call = api_retrofitService.getPostDatas();
@@ -95,7 +95,7 @@ public class MainActivity extends BaseActivity {
                     content += "ID: " + post.getId() + "\n";
                     content += "USER ID: " + post.getUserId() + "\n";
                     content += "TITLE: " + post.getTitle() + "\n";
-                    content += "TEXT: " + post.getText() + "\n";
+                    content += "TEXT: " + post.getText() + "\n\n";
 
                     resultTxt.append(content);
                 }
@@ -104,22 +104,6 @@ public class MainActivity extends BaseActivity {
             @Override
             public void onFailure(Call<List<PostData>> call, Throwable t) {
                 resultTxt.setText(t.getMessage());
-            }
-        });
-
-
-        loginBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // 입력한 아이디, 비밀번호를 변수에 저장
-                String inputEmail = emailEdt.getText().toString();
-                String inputPassword = passwordEdt.getText().toString();
-
-                // 서버에 회원이 맞는지 확인 요청 (Request)
-
-                // 테스트용으로 화면 이동
-                Intent intent = new Intent(MainActivity.this, TestActivity.class);
-                startActivity(intent);
             }
         });
     }
@@ -136,26 +120,14 @@ public class MainActivity extends BaseActivity {
             Log.d("MainActivity", userDTO.getName());
             Log.d("MainActivity", "" + userDTO.getAge());
         }
+
+        String url = "https://www.google.co.kr";
+        sendRequest(url);
     }
 
-    @Override
-    public void onConfigurationChanged(@NonNull Configuration newConfig) {
-        super.onConfigurationChanged(newConfig);
-        if(newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
-            showToast("가로방향");
-        } else if(newConfig.orientation == Configuration.ORIENTATION_PORTRAIT) {
-            showToast("세로방향");
-        }
-    }
-
-    public void showToast(String data) {
-        Toast.makeText(mContext, data, Toast.LENGTH_SHORT).show();
-    }
-
-
+    // GET 방식으로 API 가져오기
     public void sendRequest(String url) {
-        StringRequest stringRequest = new StringRequest(Request.Method.GET,
-                url,
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -176,8 +148,24 @@ public class MainActivity extends BaseActivity {
             }
         };
 
+        // 보내기 (결과는 onResponse()와 onErrorResponse()로 반환됨)
         stringRequest.setShouldCache(false);  // 이전 결과가 있더라도 새로 요청
         AppHelper.requestQueue = Volley.newRequestQueue(this);
         AppHelper.requestQueue.add(stringRequest);
+    }
+
+    // 화면 회전 시 데이터 유지
+    @Override
+    public void onConfigurationChanged(@NonNull Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        if(newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            showToast("가로방향");
+        } else if(newConfig.orientation == Configuration.ORIENTATION_PORTRAIT) {
+            showToast("세로방향");
+        }
+    }
+
+    public void showToast(String data) {
+        Toast.makeText(mContext, data, Toast.LENGTH_SHORT).show();
     }
 }
