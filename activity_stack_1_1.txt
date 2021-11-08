@@ -1,0 +1,751 @@
+ACTIVITY MANAGER ACTIVITIES (dumpsys activity activities)
+Display #0 (activities from top to bottom):
+  Stack #7274: type=standard mode=fullscreen
+  isSleeping=false
+  mBounds=Rect(0, 0 - 0, 0)
+    mResumedActivity: ActivityRecord{e396cbe u0 com.stegano.myjavaapplication/.TestActivity t7274}
+    mLastPausedActivity: ActivityRecord{1303f32 u0 com.stegano.myjavaapplication/.MainActivity t7274}
+    * Task{a224583 #7274 visible=false type=standard mode=fullscreen translucent=true A=10299:com.stegano.myjavaapplication U=0 StackId=7274 sz=2}
+      mBounds=Rect(0, 0 - 0, 0)
+      mMinWidth=-1 mMinHeight=-1
+      userId=0 effectiveUid=u0a299 mCallingUid=u0a299 mUserSetupComplete=true mCallingPackage=com.stegano.myjavaapplication mCallingFeatureId=null
+      affinity=10299:com.stegano.myjavaapplication
+      intent={act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.stegano.myjavaapplication/.SplashActivity}
+      mActivityComponent=com.stegano.myjavaapplication/.SplashActivity
+      autoRemoveRecents=false isPersistable=true activityType=1
+      rootWasReset=true mNeverRelinquishIdentity=true mReuseTask=false mLockTaskAuth=LOCK_TASK_AUTH_PINNABLE
+      Activities=[ActivityRecord{1303f32 u0 com.stegano.myjavaapplication/.MainActivity t7274}, ActivityRecord{e396cbe u0 com.stegano.myjavaapplication/.TestActivity t7274}]
+      askedCompatMode=false inRecents=true isAvailable=true
+      mRootProcess=ProcessRecord{14d8532 28427:com.stegano.myjavaapplication/u0a299}
+      taskId=7274 stackId=7274
+      mHasBeenVisible=true
+      mResizeMode=RESIZE_MODE_RESIZEABLE_VIA_SDK_VERSION mSupportsPictureInPicture=false isResizeable=true
+      lastActiveTime=15357376 (inactive for 0s)
+      lastGainFocusTime=15356022
+      hostProcess=com.stegano.myjavaapplication
+      dexBoundsPolicy:
+      * Hist #1: ActivityRecord{e396cbe u0 com.stegano.myjavaapplication/.TestActivity t7274}
+          packageName=com.stegano.myjavaapplication processName=com.stegano.myjavaapplication
+          launchedFromUid=10299 launchedFromPackage=com.stegano.myjavaapplication launchedFromFeature=null userId=0
+          app=ProcessRecord{14d8532 28427:com.stegano.myjavaapplication/u0a299}
+          Intent { cmp=com.stegano.myjavaapplication/.TestActivity }
+          rootOfTask=false task=Task{a224583 #7274 visible=false type=standard mode=fullscreen translucent=true A=10299:com.stegano.myjavaapplication U=0 StackId=7274 sz=2}
+          taskAffinity=10299:com.stegano.myjavaapplication
+          mActivityComponent=com.stegano.myjavaapplication/.TestActivity
+          baseDir=/data/app/~~bPGf7hzwcqAUoalE7rRaKA==/com.stegano.myjavaapplication-xJWw5wlLfA3Z4ne4n_wuuw==/base.apk
+          dataDir=/data/user/0/com.stegano.myjavaapplication
+          appMetaData=Bundle[{com.google.android.gms.version=12451000}]
+          stateNotNeeded=false componentSpecified=false mActivityType=standard
+          compat={600dpi} labelRes=0x7f0f001b icon=0x7f0d0000 theme=0x7f1001d2
+          mLastReportedConfigurations:
+            mGlobalConfig={1.1 450mcc5mnc [ko_KR] ldltr sw384dp w384dp h725dp 600dpi nrml long port finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1440, 3040) mAppBounds=Rect(0, 139 - 1440, 2860) mWindowingMode=fullscreen mDisplayWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_0} s.28 desktop/d ?dc ?dcui ?dcaf bts=0 ff=0 bf=0 themeSeq=0}
+            mOverrideConfig={1.1 450mcc5mnc [ko_KR] ldltr sw384dp w384dp h725dp 600dpi nrml long port finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1440, 3040) mAppBounds=Rect(0, 139 - 1440, 2860) mWindowingMode=fullscreen mDisplayWindowingMode=fullscreen mActivityType=standard mAlwaysOnTop=undefined mRotation=ROTATION_0} s.1 desktop/d dc/d ?dcui ?dcaf bts=0 ff=0 bf=0 themeSeq=0}
+          CurrentConfiguration={1.1 450mcc5mnc [ko_KR] ldltr sw384dp w384dp h725dp 600dpi nrml long port finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1440, 3040) mAppBounds=Rect(0, 139 - 1440, 2860) mWindowingMode=fullscreen mDisplayWindowingMode=fullscreen mActivityType=standard mAlwaysOnTop=undefined mRotation=ROTATION_0} s.1 desktop/d dc/d ?dcui ?dcaf bts=0 ff=0 bf=0 themeSeq=0}
+          RequestedOverrideConfiguration={0.0 ?mcc?mnc ?localeList ?layoutDir ?swdp ?wdp ?hdp ?density ?lsize ?long ?ldr ?wideColorGamut ?orien ?uimode ?night ?touch ?keyb/?/? ?nav/? winConfig={ mBounds=Rect(0, 0 - 0, 0) mAppBounds=null mWindowingMode=undefined mDisplayWindowingMode=undefined mActivityType=undefined mAlwaysOnTop=undefined mRotation=undefined} desktop/? ?dc ?dcui ?dcaf bts=-1 ff=0 bf=-1 themeSeq=0}
+          taskDescription: label="null" icon=null iconResource=/0 iconFilename=null primaryColor=ff6200ee
+            backgroundColor=ffffffff statusBarColor=ff3700b3 navigationBarColor=fff2f2f2
+          launchFailed=false launchCount=1 lastLaunchTime=-1s845ms
+          mHaveState=false mIcicle=null
+          state=RESUMED stopped=false delayedResume=false finishing=false
+          keysPaused=false inHistory=true setToSleep=false idle=true mStartingWindowState=STARTING_WINDOW_NOT_SHOWN
+          occludesParent=true noDisplay=false immersive=false launchMode=0
+          frozenBeforeDestroy=false forceNewConfig=false
+          mActivityType=standard
+          mDimAnimInfo mOwner=ActivityRecord{e396cbe u0 com.stegano.myjavaapplication/.TestActivity t7274} mDimmer=null isDimLayerValid=false isDimming=false mIsExitingAnim=false mTriggered=false
+          windows=[Window{6945570 u0 com.stegano.myjavaapplication/com.stegano.myjavaapplication.TestActivity}]
+          windowType=2 hasVisible=true
+          mIsPortraitWindowToken=false
+          mOccludesParent=true mOrientation=1
+          mVisibleRequested=true mVisible=true mClientVisible=true reportedDrawn=true reportedVisible=true
+          mNumInterestingWindows=1 mNumDrawnWindows=1 allDrawn=true lastAllDrawn=true)
+          startingData=null firstWindowDrawn=true mIsExiting=false
+          nowVisible=true lastVisibleTime=-1s352ms
+          resizeMode=RESIZE_MODE_RESIZEABLE_VIA_SDK_VERSION
+          mLastReportedMultiWindowMode=false mLastReportedPictureInPictureMode=false
+      * Hist #0: ActivityRecord{1303f32 u0 com.stegano.myjavaapplication/.MainActivity t7274}
+          packageName=com.stegano.myjavaapplication processName=com.stegano.myjavaapplication
+          launchedFromUid=10299 launchedFromPackage=com.stegano.myjavaapplication launchedFromFeature=null userId=0
+          app=ProcessRecord{14d8532 28427:com.stegano.myjavaapplication/u0a299}
+          Intent { cmp=com.stegano.myjavaapplication/.MainActivity }
+          rootOfTask=true task=Task{a224583 #7274 visible=false type=standard mode=fullscreen translucent=true A=10299:com.stegano.myjavaapplication U=0 StackId=7274 sz=2}
+          taskAffinity=10299:com.stegano.myjavaapplication
+          mActivityComponent=com.stegano.myjavaapplication/.MainActivity
+          baseDir=/data/app/~~bPGf7hzwcqAUoalE7rRaKA==/com.stegano.myjavaapplication-xJWw5wlLfA3Z4ne4n_wuuw==/base.apk
+          dataDir=/data/user/0/com.stegano.myjavaapplication
+          appMetaData=Bundle[{com.google.android.gms.version=12451000}]
+          stateNotNeeded=false componentSpecified=false mActivityType=standard
+          compat={600dpi} labelRes=0x7f0f001b icon=0x7f0d0000 theme=0x7f1001d2
+          mLastReportedConfigurations:
+            mGlobalConfig={1.1 450mcc5mnc [ko_KR] ldltr sw384dp w384dp h725dp 600dpi nrml long port finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1440, 3040) mAppBounds=Rect(0, 139 - 1440, 2860) mWindowingMode=fullscreen mDisplayWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_0} s.28 desktop/d ?dc ?dcui ?dcaf bts=0 ff=0 bf=0 themeSeq=0}
+            mOverrideConfig={1.1 450mcc5mnc [ko_KR] ldltr sw384dp w384dp h725dp 600dpi nrml long port finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1440, 3040) mAppBounds=Rect(0, 139 - 1440, 2860) mWindowingMode=fullscreen mDisplayWindowingMode=fullscreen mActivityType=standard mAlwaysOnTop=undefined mRotation=ROTATION_0} s.1 desktop/d dc/d ?dcui ?dcaf bts=0 ff=0 bf=0 themeSeq=0}
+          CurrentConfiguration={1.1 450mcc5mnc [ko_KR] ldltr sw384dp w384dp h725dp 600dpi nrml long port finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1440, 3040) mAppBounds=Rect(0, 139 - 1440, 2860) mWindowingMode=fullscreen mDisplayWindowingMode=fullscreen mActivityType=standard mAlwaysOnTop=undefined mRotation=ROTATION_0} s.1 desktop/d dc/d ?dcui ?dcaf bts=0 ff=0 bf=0 themeSeq=0}
+          RequestedOverrideConfiguration={0.0 ?mcc?mnc ?localeList ?layoutDir ?swdp ?wdp ?hdp ?density ?lsize ?long ?ldr ?wideColorGamut ?orien ?uimode ?night ?touch ?keyb/?/? ?nav/? winConfig={ mBounds=Rect(0, 0 - 0, 0) mAppBounds=null mWindowingMode=undefined mDisplayWindowingMode=undefined mActivityType=undefined mAlwaysOnTop=undefined mRotation=undefined} desktop/? ?dc ?dcui ?dcaf bts=-1 ff=0 bf=-1 themeSeq=0}
+          taskDescription: label="null" icon=null iconResource=/0 iconFilename=null primaryColor=ff6200ee
+            backgroundColor=ffffffff statusBarColor=ff3700b3 navigationBarColor=fff2f2f2
+          launchFailed=false launchCount=0 lastLaunchTime=-3s843ms
+          mHaveState=true mIcicle=Bundle[mParcelledData.dataSize=2948]
+          state=STOPPED stopped=true delayedResume=false finishing=false
+          keysPaused=false inHistory=true setToSleep=false idle=true mStartingWindowState=STARTING_WINDOW_REMOVED
+          occludesParent=true noDisplay=false immersive=false launchMode=0
+          frozenBeforeDestroy=false forceNewConfig=false
+          mActivityType=standard
+          mDimAnimInfo mOwner=ActivityRecord{1303f32 u0 com.stegano.myjavaapplication/.MainActivity t7274} mDimmer=null isDimLayerValid=false isDimming=false mIsExitingAnim=false mTriggered=false
+          windows=[Window{bda937f u0 com.stegano.myjavaapplication/com.stegano.myjavaapplication.MainActivity}]
+          windowType=2 hasVisible=true
+          mIsPortraitWindowToken=false
+          mOccludesParent=true mOrientation=-1
+          mVisibleRequested=false mVisible=false mClientVisible=false reportedDrawn=false reportedVisible=false
+          mAppStopped=true
+          mNumInterestingWindows=1 mNumDrawnWindows=1 allDrawn=true lastAllDrawn=true)
+          startingData=null firstWindowDrawn=true mIsExiting=false
+          nowVisible=false lastVisibleTime=-3s753ms
+          resizeMode=RESIZE_MODE_RESIZEABLE_VIA_SDK_VERSION
+          mLastReportedMultiWindowMode=false mLastReportedPictureInPictureMode=false
+
+  Stack #1: type=home mode=fullscreen
+  isSleeping=false
+  mBounds=Rect(0, 0 - 0, 0)
+    mLastPausedActivity: ActivityRecord{278694d u0 com.sec.android.app.launcher/.activities.LauncherActivity t7260}
+    * Task{65010d3 #7260 visible=false type=home mode=fullscreen translucent=true A=10156:com.sec.android.app.launcher.activities.LauncherActivity U=0 StackId=1 sz=1}
+      mBounds=Rect(0, 0 - 0, 0)
+      mMinWidth=-1 mMinHeight=-1
+      userId=0 effectiveUid=u0a156 mCallingUid=1000 mUserSetupComplete=true mCallingPackage=com.sec.android.preloadinstaller mCallingFeatureId=null
+      affinity=10156:com.sec.android.app.launcher.activities.LauncherActivity
+      intent={act=android.intent.action.MAIN cat=[android.intent.category.HOME] flg=0x10010000 pkg=com.sec.android.app.launcher cmp=com.sec.android.app.launcher/.activities.LauncherActivity}
+      origActivity=com.sec.android.app.launcher/.activities.LauncherActivity
+      mActivityComponent=com.sec.android.app.launcher/com.android.launcher3.uioverrides.QuickstepLauncher
+      autoRemoveRecents=false isPersistable=true activityType=2
+      rootWasReset=false mNeverRelinquishIdentity=true mReuseTask=false mLockTaskAuth=LOCK_TASK_AUTH_PINNABLE
+      Activities=[ActivityRecord{278694d u0 com.sec.android.app.launcher/.activities.LauncherActivity t7260}]
+      askedCompatMode=false inRecents=true isAvailable=true
+      mRootProcess=ProcessRecord{de63c21 6560:com.sec.android.app.launcher/u0a156}
+      taskId=7260 stackId=1
+      mHasBeenVisible=true
+      mResizeMode=RESIZE_MODE_RESIZEABLE mSupportsPictureInPicture=false isResizeable=true
+      lastActiveTime=15351939 (inactive for 5s)
+      lastGainFocusTime=15349368
+      hostProcess=com.sec.android.app.launcher
+      dexBoundsPolicy:
+      * Hist #0: ActivityRecord{278694d u0 com.sec.android.app.launcher/.activities.LauncherActivity t7260}
+          packageName=com.sec.android.app.launcher processName=com.sec.android.app.launcher
+          launchedFromUid=10156 launchedFromPackage=com.sec.android.app.launcher launchedFromFeature=null userId=0
+          app=ProcessRecord{de63c21 6560:com.sec.android.app.launcher/u0a156}
+          Intent { act=android.intent.action.MAIN cat=[android.intent.category.HOME] flg=0x10010000 pkg=com.sec.android.app.launcher cmp=com.sec.android.app.launcher/.activities.LauncherActivity (has extras) }
+          rootOfTask=true task=Task{65010d3 #7260 visible=false type=home mode=fullscreen translucent=true A=10156:com.sec.android.app.launcher.activities.LauncherActivity U=0 StackId=1 sz=1}
+          taskAffinity=10156:com.sec.android.app.launcher.activities.LauncherActivity
+          mActivityComponent=com.sec.android.app.launcher/com.android.launcher3.uioverrides.QuickstepLauncher
+          baseDir=/system/priv-app/TouchWizHome_2017/TouchWizHome_2017.apk
+          dataDir=/data/user/0/com.sec.android.app.launcher
+          appMetaData=Bundle[{com.android.launcher3.launcher_dump_provider=com.android.launcher3.LauncherProvider, android.nfc.disable_beam_default=true, SPDE.env.version=4.0.0/L30.1.18/0.9.25, com.samsung.android.resolver.ranking_priority=2000, android.content.APP_RESTRICTIONS=2132148224, SPDE.build.signature=482529f05d65dbada9b8fc4907ea176d14314ee2/81750299/release/TouchWizHome-1205033-12.1.07, disableSticker=true, backup_content_uri=content://com.sec.android.app.launcher.backup, com.samsung.android.notification.metadata=logging, disableGifKeyboard=true, DisplayCutoutBackground=true, backup_name=2132148225}]
+          stateNotNeeded=true componentSpecified=false mActivityType=home
+          compat={600dpi} labelRes=0x7f12008d icon=0x7f08023f theme=0x7f13000f
+          mLastReportedConfigurations:
+            mGlobalConfig={1.1 450mcc5mnc [ko_KR] ldltr sw384dp w384dp h725dp 600dpi nrml long port finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1440, 3040) mAppBounds=Rect(0, 139 - 1440, 2860) mWindowingMode=fullscreen mDisplayWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_0} s.54 desktop/d ?dc ?dcui ?dcaf bts=0 ff=0 bf=0 themeSeq=0}
+            mOverrideConfig={1.1 450mcc5mnc [ko_KR] ldltr sw384dp w384dp h725dp 600dpi nrml long port finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1440, 3040) mAppBounds=Rect(0, 139 - 1440, 2860) mWindowingMode=fullscreen mDisplayWindowingMode=fullscreen mActivityType=home mAlwaysOnTop=undefined mRotation=ROTATION_0} s.2 desktop/d dc/d ?dcui ?dcaf bts=0 ff=0 bf=0 themeSeq=0}
+          CurrentConfiguration={1.1 450mcc5mnc [ko_KR] ldltr sw384dp w384dp h725dp 600dpi nrml long port finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1440, 3040) mAppBounds=Rect(0, 139 - 1440, 2860) mWindowingMode=fullscreen mDisplayWindowingMode=fullscreen mActivityType=home mAlwaysOnTop=undefined mRotation=ROTATION_0} s.2 desktop/d dc/d ?dcui ?dcaf bts=0 ff=0 bf=0 themeSeq=0}
+          RequestedOverrideConfiguration={0.0 ?mcc?mnc ?localeList ?layoutDir ?swdp ?wdp ?hdp ?density ?lsize ?long ?ldr ?wideColorGamut ?orien ?uimode ?night ?touch ?keyb/?/? ?nav/? winConfig={ mBounds=Rect(0, 0 - 0, 0) mAppBounds=null mWindowingMode=undefined mDisplayWindowingMode=undefined mActivityType=home mAlwaysOnTop=undefined mRotation=undefined} desktop/? ?dc ?dcui ?dcaf bts=-1 ff=0 bf=-1 themeSeq=0}
+          taskDescription: label="null" icon=null iconResource=/0 iconFilename=null primaryColor=ff0381fe
+            backgroundColor=fffcfcfc statusBarColor=0 navigationBarColor=0
+          launchFailed=false launchCount=0 lastLaunchTime=-2h37m35s705ms
+          mHaveState=true mIcicle=Bundle[mParcelledData.dataSize=14360]
+          state=STOPPED stopped=true delayedResume=false finishing=false
+          keysPaused=false inHistory=true setToSleep=false idle=true mStartingWindowState=STARTING_WINDOW_REMOVED
+          occludesParent=true noDisplay=false immersive=false launchMode=2
+          frozenBeforeDestroy=false forceNewConfig=false
+          mActivityType=home
+          mDimAnimInfo mOwner=ActivityRecord{278694d u0 com.sec.android.app.launcher/.activities.LauncherActivity t7260} mDimmer=null isDimLayerValid=false isDimming=false mIsExitingAnim=false mTriggered=false
+          windows=[Window{8286447 u0 com.sec.android.app.launcher/com.sec.android.app.launcher.activities.LauncherActivity}]
+          windowType=2 hasVisible=true
+          mIsPortraitWindowToken=false
+          mOccludesParent=true mOrientation=5
+          mVisibleRequested=false mVisible=false mClientVisible=false reportedDrawn=false reportedVisible=false
+          mAppStopped=true
+          mNumInterestingWindows=1 mNumDrawnWindows=1 allDrawn=true lastAllDrawn=true)
+          startingData=null firstWindowDrawn=true mIsExiting=false
+          nowVisible=false lastVisibleTime=-8s378ms
+          connections={}
+          resizeMode=RESIZE_MODE_RESIZEABLE
+          mLastReportedMultiWindowMode=false mLastReportedPictureInPictureMode=false
+
+  Stack #3: type=undefined mode=split-screen-primary
+  isSleeping=false
+  mBounds=Rect(0, 0 - 1440, 1484)
+
+  Stack #4: type=undefined mode=split-screen-secondary
+  isSleeping=false
+  mBounds=Rect(0, 1514 - 1440, 3040)
+
+  Stack #7263: type=standard mode=fullscreen
+  isSleeping=false
+  mBounds=Rect(0, 0 - 0, 0)
+    mLastPausedActivity: ActivityRecord{5911750 u0 com.samsung.android.dialer/.DialtactsActivity t7263}
+    * Task{bc17d49 #7263 visible=false type=standard mode=fullscreen translucent=true A=10124:samsung.android.task.dialtacts U=0 StackId=7263 sz=1}
+      mBounds=Rect(0, 0 - 0, 0)
+      mMinWidth=-1 mMinHeight=-1
+      userId=0 effectiveUid=u0a124 mCallingUid=u0a156 mUserSetupComplete=true mCallingPackage=com.sec.android.app.launcher mCallingFeatureId=null
+      affinity=10124:samsung.android.task.dialtacts
+      intent={act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.samsung.android.dialer/.DialtactsActivity}
+      mActivityComponent=com.samsung.android.dialer/.DialtactsActivity
+      autoRemoveRecents=false isPersistable=true activityType=1
+      rootWasReset=true mNeverRelinquishIdentity=true mReuseTask=false mLockTaskAuth=LOCK_TASK_AUTH_PINNABLE
+      Activities=[ActivityRecord{5911750 u0 com.samsung.android.dialer/.DialtactsActivity t7263}]
+      askedCompatMode=false inRecents=true isAvailable=true
+      mRootProcess=ProcessRecord{ebe0324 20879:com.samsung.android.dialer/u0a124}
+      taskId=7263 stackId=7263
+      mHasBeenVisible=true
+      mResizeMode=RESIZE_MODE_RESIZEABLE mSupportsPictureInPicture=false isResizeable=true
+      lastActiveTime=483362 (inactive for 14874s)
+      lastGainFocusTime=481261
+      hostProcess=com.samsung.android.dialer
+      dexBoundsPolicy:
+      * Hist #0: ActivityRecord{5911750 u0 com.samsung.android.dialer/.DialtactsActivity t7263}
+          packageName=com.samsung.android.dialer processName=com.samsung.android.dialer
+          launchedFromUid=10156 launchedFromPackage=com.sec.android.app.launcher launchedFromFeature=null userId=0
+          app=ProcessRecord{ebe0324 20879:com.samsung.android.dialer/u0a124}
+          Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.samsung.android.dialer/.DialtactsActivity bnds=[51,2532][312,2860] }
+          rootOfTask=true task=Task{bc17d49 #7263 visible=false type=standard mode=fullscreen translucent=true A=10124:samsung.android.task.dialtacts U=0 StackId=7263 sz=1}
+          taskAffinity=10124:samsung.android.task.dialtacts
+          mActivityComponent=com.samsung.android.dialer/.DialtactsActivity
+          baseDir=/system/priv-app/SamsungDialer/SamsungDialer.apk
+          dataDir=/data/user/0/com.samsung.android.dialer
+          appMetaData=Bundle[{com.samsung.android.mobileservice.IntentRequest=true, com.sec.android.app.blockdisabling=true, com.samsung.android.sdk.bixby2.companionApp=true, SamsungBasicInteraction=SEP10, SPDE.env.version=4.0.0/L30.1.18/0.9.26, com.samsung.android.notification.logging=runestone, com.samsung.android.bixby.capsuleId=viv.contactApp, com.samsung.android.resolver.ranking_priority=8000, com.samsung.android.mobileservice.AppId=bcy8oxhu9c, com.sec.android.easyMover.progressIntent=true, SPDE.build.signature=3373e80c16b26fce58fde458c84264bf9dcad14e/83189171/release/SamsungDialer-1200010-12.7.05, backup_content_uri=content://com.samsung.dialer.backup, com.samsung.android.sdk.spage.card.info=2132082690, android.max_aspect=2.1, com.samsung.android.sdk.spage.version_code=130100000, com.samsung.android.sdk.spage.version=1.3.01.0, com.google.android.geo.API_KEY=AIzaSyA49H5Od3_lFHQJSZBaskqViaaXDVUcxBc, backup_name=2132082689, com.google.android.gms.version=12451000, com.samsung.android.support.executable=2132082691}]
+          stateNotNeeded=false componentSpecified=false mActivityType=standard
+          compat={600dpi} labelRes=0x7f1201c0 icon=0x7f0f0001 theme=0x7f13013f
+          mLastReportedConfigurations:
+            mGlobalConfig={1.1 450mcc5mnc [ko_KR] ldltr sw384dp w384dp h725dp 600dpi nrml long port finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1440, 3040) mAppBounds=Rect(0, 139 - 1440, 2860) mWindowingMode=fullscreen mDisplayWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_0} s.28 desktop/d ?dc ?dcui ?dcaf bts=0 ff=0 bf=0 themeSeq=0}
+            mOverrideConfig={1.1 450mcc5mnc [ko_KR] ldltr sw384dp w384dp h725dp 600dpi nrml long port finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1440, 3040) mAppBounds=Rect(0, 139 - 1440, 2860) mWindowingMode=fullscreen mDisplayWindowingMode=fullscreen mActivityType=standard mAlwaysOnTop=undefined mRotation=ROTATION_0} s.1 desktop/d dc/d ?dcui ?dcaf bts=0 ff=0 bf=0 themeSeq=0}
+          CurrentConfiguration={1.1 450mcc5mnc [ko_KR] ldltr sw384dp w384dp h725dp 600dpi nrml long port finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1440, 3040) mAppBounds=Rect(0, 139 - 1440, 2860) mWindowingMode=fullscreen mDisplayWindowingMode=fullscreen mActivityType=standard mAlwaysOnTop=undefined mRotation=ROTATION_0} s.1 desktop/d dc/d ?dcui ?dcaf bts=0 ff=0 bf=0 themeSeq=0}
+          RequestedOverrideConfiguration={0.0 ?mcc?mnc ?localeList ?layoutDir ?swdp ?wdp ?hdp ?density ?lsize ?long ?ldr ?wideColorGamut ?orien ?uimode ?night ?touch ?keyb/?/? ?nav/? winConfig={ mBounds=Rect(0, 0 - 0, 0) mAppBounds=null mWindowingMode=undefined mDisplayWindowingMode=undefined mActivityType=undefined mAlwaysOnTop=undefined mRotation=undefined} desktop/? ?dc ?dcui ?dcaf bts=-1 ff=0 bf=-1 themeSeq=0}
+          taskDescription: label="null" icon=null iconResource=/0 iconFilename=null primaryColor=ff15b76d
+            backgroundColor=fffcfcfc statusBarColor=fff2f2f2 navigationBarColor=fff2f2f2
+          launchFailed=false launchCount=0 lastLaunchTime=-2h31m32s288ms
+          mHaveState=true mIcicle=Bundle[mParcelledData.dataSize=6080]
+          state=STOPPED stopped=true delayedResume=false finishing=false
+          keysPaused=false inHistory=true setToSleep=false idle=true mStartingWindowState=STARTING_WINDOW_REMOVED
+          occludesParent=true noDisplay=false immersive=false launchMode=2
+          frozenBeforeDestroy=false forceNewConfig=false
+          mActivityType=standard
+          mDimAnimInfo mOwner=ActivityRecord{5911750 u0 com.samsung.android.dialer/.DialtactsActivity t7263} mDimmer=null isDimLayerValid=false isDimming=false mIsExitingAnim=false mTriggered=false
+          windows=[Window{ca124b3 u0 com.samsung.android.dialer/com.samsung.android.dialer.DialtactsActivity}]
+          windowType=2 hasVisible=true
+          mIsPortraitWindowToken=false
+          mOccludesParent=true mOrientation=-1
+          mVisibleRequested=false mVisible=false mClientVisible=false reportedDrawn=false reportedVisible=false
+          mAppStopped=true
+          mNumInterestingWindows=1 mNumDrawnWindows=1 allDrawn=true lastAllDrawn=true)
+          startingData=null firstWindowDrawn=true mIsExiting=false
+          nowVisible=false lastVisibleTime=-2h31m31s904ms
+          resizeMode=RESIZE_MODE_RESIZEABLE
+          mLastReportedMultiWindowMode=false mLastReportedPictureInPictureMode=false
+          activityMetaData=Bundle[{android.app.shortcuts=2132082695, android.app.searchable=2132082697, com.samsung.android.keep-snapshotcache=true, assistant=2132082688, com.samsung.android.startingwindow.LAYOUT_RESID_FOR_MASS=2131558555}]
+
+  Resumed activities in task display areas (from top to bottom):
+    Resumed: ActivityRecord{e396cbe u0 com.stegano.myjavaapplication/.TestActivity t7274}
+
+  ResumedActivity: ActivityRecord{e396cbe u0 com.stegano.myjavaapplication/.TestActivity t7274}
+
+ActivityStackSupervisor state:
+  topDisplayFocusedStack=Task{a224583 #7274 visible=false type=standard mode=fullscreen translucent=true A=10299:com.stegano.myjavaapplication U=0 StackId=7274 sz=2}
+  mLastOrientationSource=ActivityRecord{e396cbe u0 com.stegano.myjavaapplication/.TestActivity t7274}
+  Display: mDisplayId=0 stacks=5
+    init=1440x3040 560dpi base=1440x3040 600dpi cur=1440x3040 app=1440x2721 rng=1440x1350-2721x2721
+    deferred=false mLayoutNeeded=true mTouchExcludeRegion=SkRegion((0,0,1440,3040))
+
+    initCutout=DisplayCutout{insets=Rect(0, 139 - 0, 0) waterfall=Insets{left=0, top=0, right=0, bottom=0} boundingRect={Bounds=[Rect(0, 0 - 0, 0), Rect(1013, 0 - 1440, 139), Rect(0, 0 - 0, 0), Rect(0, 0 - 0, 0)]}}
+    baseCutout=DisplayCutout{insets=Rect(0, 139 - 0, 0) waterfall=Insets{left=0, top=0, right=0, bottom=0} boundingRect={Bounds=[Rect(0, 0 - 0, 0), Rect(1013, 0 - 1440, 139), Rect(0, 0 - 0, 0), Rect(0, 0 - 0, 0)]}}
+
+  mLayoutSeq=1658
+  mCurrentFocus=Window{6945570 u0 com.stegano.myjavaapplication/com.stegano.myjavaapplication.TestActivity}
+  mFocusedApp=ActivityRecord{e396cbe u0 com.stegano.myjavaapplication/.TestActivity t7274}
+  mLastStatusBarVisibility=0x8008
+
+  displayId=0
+  mWallpaperTarget=null
+  mLastWallpaperX=0.5 mLastWallpaperY=0.5
+  mLastWallpaperDisplayOffsetX=0 mLastWallpaperDisplayOffsetY=0
+
+  Task display areas in top down Z order:
+    TaskDisplayArea DefaultTaskDisplayArea
+      mLastOrientationSource=Task{a224583 #7274 visible=false type=standard mode=fullscreen translucent=true A=10299:com.stegano.myjavaapplication U=0 StackId=7274 sz=2}
+      mPreferredTopFocusableStack=Task{a224583 #7274 visible=false type=standard mode=fullscreen translucent=true A=10299:com.stegano.myjavaapplication U=0 StackId=7274 sz=2}
+      mLastFocusedStack=Task{a224583 #7274 visible=false type=standard mode=fullscreen translucent=true A=10299:com.stegano.myjavaapplication U=0 StackId=7274 sz=2}
+      Application tokens in top down Z order:
+      * Task{a224583 #7274 visible=false type=standard mode=fullscreen translucent=true A=10299:com.stegano.myjavaapplication U=0 StackId=7274 sz=2}
+        mLastOrientationSource=ActivityRecord{e396cbe u0 com.stegano.myjavaapplication/.TestActivity t7274}
+        mDimAnimInfo mOwner=Task{a224583 #7274 visible=false type=standard mode=fullscreen translucent=true A=10299:com.stegano.myjavaapplication U=0 StackId=7274 sz=2} mDimmer=null isDimLayerValid=false isDimming=false mIsExitingAnim=false mTriggered=false
+        bounds=[0,0][1440,3040]
+        * ActivityRecord{e396cbe u0 com.stegano.myjavaapplication/.TestActivity t7274}
+        * ActivityRecord{1303f32 u0 com.stegano.myjavaapplication/.MainActivity t7274}
+      * Task{e1af345 #1 visible=true type=home mode=fullscreen translucent=false I=com.sec.android.app.launcher/.activities.LauncherActivity U=0 StackId=1 sz=1}
+        mLastOrientationSource=Task{65010d3 #7260 visible=false type=home mode=fullscreen translucent=true A=10156:com.sec.android.app.launcher.activities.LauncherActivity U=0 StackId=1 sz=1}
+        mDimAnimInfo mOwner=Task{e1af345 #1 visible=true type=home mode=fullscreen translucent=false I=com.sec.android.app.launcher/.activities.LauncherActivity U=0 StackId=1 sz=1} mDimmer=null isDimLayerValid=false isDimming=false mIsExitingAnim=false mTriggered=false
+        bounds=[0,0][1440,3040]
+        * Task{65010d3 #7260 visible=false type=home mode=fullscreen translucent=true A=10156:com.sec.android.app.launcher.activities.LauncherActivity U=0 StackId=1 sz=1}
+          mLastOrientationSource=ActivityRecord{278694d u0 com.sec.android.app.launcher/.activities.LauncherActivity t7260}
+          mDimAnimInfo mOwner=Task{65010d3 #7260 visible=false type=home mode=fullscreen translucent=true A=10156:com.sec.android.app.launcher.activities.LauncherActivity U=0 StackId=1 sz=1} mDimmer=null isDimLayerValid=false isDimming=false mIsExitingAnim=false mTriggered=false
+          bounds=[0,0][1440,3040]
+          * ActivityRecord{278694d u0 com.sec.android.app.launcher/.activities.LauncherActivity t7260}
+      * Task{32c7bb5 #3 visible=false type=undefined mode=split-screen-primary translucent=true ?? U=0 StackId=3 sz=0}
+        mDimAnimInfo mOwner=Task{32c7bb5 #3 visible=false type=undefined mode=split-screen-primary translucent=true ?? U=0 StackId=3 sz=0} mDimmer=null isDimLayerValid=false isDimming=false mIsExitingAnim=false mTriggered=false
+        bounds=[0,0][1440,1484]
+      * Task{aa0024a #4 visible=false type=undefined mode=split-screen-secondary translucent=true ?? U=0 StackId=4 sz=0}
+        mDimAnimInfo mOwner=Task{aa0024a #4 visible=false type=undefined mode=split-screen-secondary translucent=true ?? U=0 StackId=4 sz=0} mDimmer=null isDimLayerValid=false isDimming=false mIsExitingAnim=false mTriggered=false
+        bounds=[0,1514][1440,3040]
+      * Task{bc17d49 #7263 visible=false type=standard mode=fullscreen translucent=true A=10124:samsung.android.task.dialtacts U=0 StackId=7263 sz=1}
+        mDimAnimInfo mOwner=Task{bc17d49 #7263 visible=false type=standard mode=fullscreen translucent=true A=10124:samsung.android.task.dialtacts U=0 StackId=7263 sz=1} mDimmer=null isDimLayerValid=false isDimming=false mIsExitingAnim=false mTriggered=false
+        bounds=[0,0][1440,3040]
+        * ActivityRecord{5911750 u0 com.samsung.android.dialer/.DialtactsActivity t7263}
+
+  no ScreenRotationAnimation 
+
+  homeStack=Task=1
+  splitScreenPrimaryStack=Task=3
+
+  PinnedStackController
+    mIsImeShowing=false
+    mImeHeight=0
+    mAspectRatio=-1.0
+    mMinAspectRatio=0.41841003
+    mMaxAspectRatio=2.39
+    mActions=[]
+    mDisplayInfo=DisplayInfo{"기본으로 제공되는 화면", displayId 0, FLAG_SECURE, FLAG_SUPPORTS_PROTECTED_BUFFERS, FLAG_TRUSTED, real 1440 x 3040, largest app 2721 x 2721, smallest app 1440 x 1350, appVsyncOff 0, presDeadline 17666666, mode 1, defaultMode 1, modes [{id=1, width=1440, height=3040, fps=60.000004}, {id=2, width=1080, height=2280, fps=60.000004}, {id=3, width=720, height=1520, fps=60.000004}], hdrCapabilities HdrCapabilities{mSupportedHdrTypes=[2, 3], mMaxLuminance=400.0, mMaxAverageLuminance=120.0, mMinLuminance=5.0E-4}, minimalPostProcessingSupported false, rotation 0, state ON, type INTERNAL, uniqueId "local:0", app 1440 x 2721, density 600 (508.0 x 508.0) dpi, layerStack 0, colorMode 0, supportedColorModes [0, 7, 9], address {port=0}, deviceProductInfo null, removeMode 0}
+
+  DisplayFrames w=1440 h=3040 r=0
+    mStable=[0,139][1440,2860]
+    mStableFullscreen=[0,0][1440,2860]
+    mDock=[0,139][1440,2860]
+    mCurrent=[0,139][1440,2860]
+    mSystem=[0,0][1440,3040]
+    mContent=[0,139][1440,2860]
+    mVoiceContent=[0,139][1440,2860]
+    mRestricted=[0,0][1440,2860]
+    mUnrestricted=[0,0][1440,3040]
+    mDisplayCutout=WmDisplayCutout{DisplayCutout{insets=Rect(0, 139 - 0, 0) waterfall=Insets{left=0, top=0, right=0, bottom=0} boundingRect={Bounds=[Rect(0, 0 - 0, 0), Rect(1013, 0 - 1440, 139), Rect(0, 0 - 0, 0), Rect(0, 0 - 0, 0)]}}, mFrameSize=1440x3040}
+
+  DisplayPolicy
+    mCarDockEnablesAccelerometer=true mDeskDockEnablesAccelerometer=true
+    mDockMode=EXTRA_DOCK_STATE_UNDOCKED mLidState=LID_ABSENT
+    mAwake=true mScreenOnEarly=true mScreenOnFully=true
+    mKeyguardDrawComplete=true mWindowManagerDrawComplete=true
+    mHdmiPlugged=false
+    mLastSystemUiFlags=0x8008 mResettingSystemUiFlags=0x0 mForceClearedSystemUiFlags=0x0
+    mShowingDream=false mDreamingLockscreen=false    mStatusBar=Window{c91f3f4 u0 StatusBar}    mExpandedPanel=Window{5df2922 u0 NotificationShade} isKeyguardShowing=false
+    mNavigationBar=Window{be8b22f u0 NavigationBar0}
+    mNavBarOpacityMode=0
+    mNavigationBarCanMove=true
+    mNavigationBarPosition=4
+    mNavigationBarHeightForRotationDefault=[180, 180, 180, 180]
+    mCurrentUserResources
+     .mUserId=0
+     .getAssets().getApkPaths()=[/system/framework/framework-res.apk, /vendor/overlay/GmsConfigOverlayCommon.apk, /vendor/overlay/GmsConfigOverlayGSA.apk, /vendor/overlay/GooglePermissionControllerFrameworkOverlay.apk, /vendor/overlay/framework-res__auto_generated_rro_vendor.apk, /system/framework/framework-res.apk, /vendor/overlay/NavigationBarMode3Button/NavigationBarMode3ButtonOverlay.apk]
+     .getDimensionPixelSize(R.dimen.navigation_bar_height)=180
+    getSystemUiContext() = android.app.ContextImpl@f6019ec, fromSystem = android.app.ContextImpl@f6019ec
+    mCurrentUserResources = android.content.res.Resources@5a7deb8, fromSystem = android.content.res.Resources@5a7deb8
+    mCurrentUserResources = android.content.res.ResourcesImpl@e08ff5f, fromSystem = android.content.res.ResourcesImpl@e08ff5f
+    ResourcesManager:
+      cached apks: 0 [cache disabled]
+      total apks: 21
+      resources: 27
+      resource impls: 15
+      resources: ResourcesHashList 5a7deb8, dadfbb2, 3709703, 4456680, dc7d4b9, fc20fe, fdba05f, 3da6aac, d880375, 5754f0a, cc3e37b, ad98598, e261f1, ba151d6, c233c57, 9ad6344, daa2c2d, 2b8b562, 5825e7d, 2fa8172, 84609c3, c9dc240, ddb6579, 3eb42be, 6757f1f, dbcc26c, 823e035, count = 27, count = 0]
+      resource impls: ImplHashList a1dddac, bb546f3, abf6fb0, 749fa75, 4d7a0a, 9aa5e29, 2f0c5ae, 394ccca, f535f4f, 3a3d6dc, e08ff5f, 261b3e5, 878eba, 510a16b, d0584c8, count = 15
+      11-07 15:52:53.894  1000  1013  1013 : [setDisplayPolicyResources #1], res = 0 -> 5a7deb8, impl = 0 -> 8a61491
+      11-07 15:54:00.296  1000  1013  1013 : redirectResourcesToNewImplLocked, impl = 8a61491 -> e08ff5f
+      11-07 15:54:00.312  1000  1013  1013 : [setDisplayPolicyResources #2], res = 5a7deb8 -> 5a7deb8, impl = 8a61491 -> e08ff5f
+    mFocusedWindow=Window{6945570 u0 com.stegano.myjavaapplication/com.stegano.myjavaapplication.TestActivity}
+    mTopFullscreenOpaqueWindowState=Window{6945570 u0 com.stegano.myjavaapplication/com.stegano.myjavaapplication.TestActivity}
+    mTopFullscreenOpaqueOrDimmingWindowState=Window{6945570 u0 com.stegano.myjavaapplication/com.stegano.myjavaapplication.TestActivity}
+    mTopIsFullscreen=false
+    mForceStatusBar=false    mForceShowSystemBarsFromExternal=false mAllowLockscreenWhenOn=false
+
+    DisplayPolicyExtension
+      CoverPolicyController
+        mLastCoverAppCovered=false
+
+    Looper state:
+      Looper (android.ui, tid 25) {47ea961}
+        (Total messages: 0, polling=true, quitting=false)
+
+  DisplayRotation
+    mCurrentAppOrientation=SCREEN_ORIENTATION_PORTRAIT
+    mLastOrientation=1
+    mRotation=0 mDeferredRotationPauseCount=0
+    mLandscapeRotation=ROTATION_90 mSeascapeRotation=ROTATION_270
+    mPortraitRotation=ROTATION_0 mUpsideDownRotation=ROTATION_180
+    mSupportAutoRotation=true
+    WindowOrientationListener
+      mEnabled=true
+      mCurrentRotation=ROTATION_0
+      mSemContextManager=android.hardware.scontext.SContextManager@38fdc86
+      OrientationSensorJudge
+        mDesiredRotation=-1
+        mProposedRotation=-1
+        mTouching=false
+        mTouchEndedTimestampNanos=15356004403558
+
+    mCarDockRotation=-1 mDeskDockRotation=-1
+    mUserRotationMode=USER_ROTATION_LOCKED mUserRotation=ROTATION_0 mAllowAllRotations=unknown
+    mDemoHdmiRotation=ROTATION_90 mDemoHdmiRotationLock=false mUndockedHdmiRotation=-1
+    mLidOpenRotation=-1
+    mFixedToUserRotation=false
+    mRotatingSeamlessly=false mSeamlessRotationCount=0
+
+  InputConsumers:
+    name=recents_animation_input_consumer pid=6560 user=UserHandle{0}
+
+  WindowInsetsStateController
+    InsetsState
+      InsetsSource type=ITYPE_STATUS_BAR frame=[0,0][1440,139] visible=true
+      InsetsSource type=ITYPE_NAVIGATION_BAR frame=[0,2860][1440,3040] visible=true
+      InsetsSource type=ITYPE_TOP_GESTURES frame=[0,0][1440,139] visible=true
+      InsetsSource type=ITYPE_BOTTOM_GESTURES frame=[0,2860][1440,3040] visible=true
+      InsetsSource type=ITYPE_LEFT_GESTURES frame=[0,0][0,3040] visible=true
+      InsetsSource type=ITYPE_RIGHT_GESTURES frame=[1440,0][1440,3040] visible=true
+      InsetsSource type=ITYPE_TOP_TAPPABLE_ELEMENT frame=[0,0][1440,139] visible=true
+      InsetsSource type=ITYPE_BOTTOM_TAPPABLE_ELEMENT frame=[0,2860][1440,3040] visible=true
+      InsetsSource type=ITYPE_LEFT_DISPLAY_CUTOUT frame=[0,0][-2147483648,3040] visible=true
+      InsetsSource type=ITYPE_TOP_DISPLAY_CUTOUT frame=[0,0][1440,139] visible=true
+      InsetsSource type=ITYPE_RIGHT_DISPLAY_CUTOUT frame=[2147483647,0][1440,3040] visible=true
+      InsetsSource type=ITYPE_BOTTOM_DISPLAY_CUTOUT frame=[0,2147483647][1440,3040] visible=true
+      InsetsSource type=ITYPE_IME frame=[0,0][0,0] visible=false
+      InsetsSource type=ITYPE_CLIPBOARD frame=[0,0][0,0] visible=false
+    Control map:
+    ITYPE_IME -> Window{6945570 u0 com.stegano.myjavaapplication/com.stegano.myjavaapplication.TestActivity}
+    ITYPE_NAVIGATION_BAR -> Window{6945570 u0 com.stegano.myjavaapplication/com.stegano.myjavaapplication.TestActivity}
+    ITYPE_STATUS_BAR -> Window{6945570 u0 com.stegano.myjavaapplication/com.stegano.myjavaapplication.TestActivity}
+    InsetsSourceProviders map:
+    ITYPE_CLIPBOARD -> 
+  InsetsSourceProvider
+   mSource=    InsetsSource type=ITYPE_CLIPBOARD frame=[0,0][0,0] visible=false
+   mFakeControl=    InsetsSourceControl type=ITYPE_CLIPBOARD mLeash=null mSurfacePosition=Point(0, 0) mControlledByPolicy=false
+ mIsLeashReadyForDispatching=true mImeOverrideFrame=Rect(0, 0 - 0, 0)   mPendingControlTarget=    mDisplayId=0 rootTaskId=7274 mSession=Session{88ea464 28427:u0a10299} mClient=android.os.BinderProxy@d5b2bb3
+    mOwnerUid=10299 showForAllUsers=false package=com.stegano.myjavaapplication appop=NONE
+    mAttrs={(0,0)(fillxfill) sim={adjust=pan forwardNavigation} ty=BASE_APPLICATION wanim=0x1030304
+      fl=81810100
+      pfl=12020000
+      apr=LIGHT_NAVIGATION_BARS
+      fitSides= naviIconColor=0
+      sfl=100000}
+    Requested w=1440 h=3040 mLayoutSeq=1658
+    mHasSurface=true isReadyForDisplay()=true mWindowRemovalAllowed=false
+    WindowStateAnimator{afcee3b com.stegano.myjavaapplication/com.stegano.myjavaapplication.TestActivity}:
+      Surface: shown=true layer=0 alpha=1.0 rect=(0.0,0.0) 1440 x 3040 transform=(1.0, 0.0, 1.0, 0.0)
+    mForceSeamlesslyRotate=false seamlesslyRotate: pending=null finishedFrameNumber=0
+    isOnScreen=true
+    isVisible=true
+    mIsTspNoteMode=false
+    mHiddenWhileProfileLockedState=false
+    ITYPE_IME -> 
+  InsetsSourceProvider
+   mSource=    InsetsSource type=ITYPE_IME frame=[0,0][0,0] visible=false
+   mControl=    InsetsSourceControl type=ITYPE_IME mLeash=Surface(name=Surface(name=baf37cf InputMethod)/@0x6f5a13a - animation-leash)/@0x34e2af7 mSurfacePosition=Point(0, 2860) mControlledByPolicy=false
+   mFakeControl=    InsetsSourceControl type=ITYPE_IME mLeash=null mSurfacePosition=Point(0, 0) mControlledByPolicy=false
+ mIsLeashReadyForDispatching=true mImeOverrideFrame=Rect(0, 0 - 0, 0)   mWin=    mDisplayId=0 rootTaskId=1 mSession=Session{be8405a 9888:u0a10256} mClient=android.os.BinderProxy@76ab02e
+    mOwnerUid=10256 showForAllUsers=false package=com.samsung.android.honeyboard appop=SYSTEM_INTERNAL_WINDOW
+    mAttrs={(0,0)(fillxwrap) gr=BOTTOM CENTER_VERTICAL sim={adjust=pan forwardNavigation} ty=INPUT_METHOD fmt=TRANSPARENT wanim=0x7f130143
+      fl=81800108
+      pfl=12000000
+      vsysui=10
+      apr=LIGHT_NAVIGATION_BARS
+      fitTypes=STATUS_BARS NAVIGATION_BARS
+      fitSides=LEFT TOP RIGHT
+      fitIgnoreVis dimDuration=150 naviIconColor=0}
+    Requested w=1440 h=180 mLayoutSeq=83
+    mIsImWindow=true mIsWallpaper=false mIsFloatingLayer=true mWallpaperVisible=false
+    mHasSurface=false isReadyForDisplay()=false mWindowRemovalAllowed=false
+    ContainerAnimator:
+      mLeash=Surface(name=Surface(name=baf37cf InputMethod)/@0x6f5a13a - animation-leash)/@0x34e2af7 mAnimationType=32
+      Animation: com.android.server.wm.InsetsSourceProvider$ControlAdapter@ae99958
+        ControlAdapter
+         mCapturedLeash=Surface(name=Surface(name=baf37cf InputMethod)/@0x6f5a13a - animation-leash)/@0x34e2af7    WindowStateAnimator{f1b7a9d InputMethod}:
+      mShownAlpha=0.0 mAlpha=1.0 mLastAlpha=0.0
+    mForceSeamlesslyRotate=false seamlesslyRotate: pending=null finishedFrameNumber=0
+    isOnScreen=false
+    isVisible=false
+    mIsTspNoteMode=false
+    isInsetProviderClientVisible=false
+    mHiddenWhileProfileLockedState=false
+   mAdapter=    ControlAdapter
+     mCapturedLeash=Surface(name=Surface(name=baf37cf InputMethod)/@0x6f5a13a - animation-leash)/@0x34e2af7   mControlTarget=    mDisplayId=0 rootTaskId=7274 mSession=Session{88ea464 28427:u0a10299} mClient=android.os.BinderProxy@d5b2bb3
+    mOwnerUid=10299 showForAllUsers=false package=com.stegano.myjavaapplication appop=NONE
+    mAttrs={(0,0)(fillxfill) sim={adjust=pan forwardNavigation} ty=BASE_APPLICATION wanim=0x1030304
+      fl=81810100
+      pfl=12020000
+      apr=LIGHT_NAVIGATION_BARS
+      fitSides= naviIconColor=0
+      sfl=100000}
+    Requested w=1440 h=3040 mLayoutSeq=1658
+    mHasSurface=true isReadyForDisplay()=true mWindowRemovalAllowed=false
+    WindowStateAnimator{afcee3b com.stegano.myjavaapplication/com.stegano.myjavaapplication.TestActivity}:
+      Surface: shown=true layer=0 alpha=1.0 rect=(0.0,0.0) 1440 x 3040 transform=(1.0, 0.0, 1.0, 0.0)
+    mForceSeamlesslyRotate=false seamlesslyRotate: pending=null finishedFrameNumber=0
+    isOnScreen=true
+    isVisible=true
+    mIsTspNoteMode=false
+    mHiddenWhileProfileLockedState=false
+    ITYPE_BOTTOM_TAPPABLE_ELEMENT -> 
+  InsetsSourceProvider
+   mSource=    InsetsSource type=ITYPE_BOTTOM_TAPPABLE_ELEMENT frame=[0,2860][1440,3040] visible=true
+   mFakeControl=    InsetsSourceControl type=ITYPE_BOTTOM_TAPPABLE_ELEMENT mLeash=null mSurfacePosition=Point(0, 0) mControlledByPolicy=false
+ mIsLeashReadyForDispatching=true mImeOverrideFrame=Rect(0, 0 - 0, 0)   mWin=    mDisplayId=0 rootTaskId=1 mSession=Session{b7fdc0c 6318:u0a10060} mClient=android.os.BinderProxy@3f9fe09
+    mOwnerUid=10060 showForAllUsers=true package=com.android.systemui appop=SYSTEM_INTERNAL_WINDOW
+    mAttrs={(0,0)(fillxfill) sim={adjust=pan} ty=NAVIGATION_BAR fmt=TRANSLUCENT
+      fl=21840068
+      pfl=3000000
+      fitTypes=STATUS_BARS NAVIGATION_BARS CAPTION_BAR IME naviIconColor=0}
+    Requested w=1440 h=180 mLayoutSeq=1658
+    mHasSurface=true isReadyForDisplay()=true mWindowRemovalAllowed=false
+    ContainerAnimator:
+      mLeash=Surface(name=Surface(name=be8b22f NavigationBar0)/@0xb617344 - animation-leash)/@0x27a72a5 mAnimationType=32
+      Animation: com.android.server.wm.InsetsSourceProvider$ControlAdapter@43f4ab1
+        ControlAdapter
+         mCapturedLeash=Surface(name=Surface(name=be8b22f NavigationBar0)/@0xb617344 - animation-leash)/@0x27a72a5    WindowStateAnimator{f3dd2e3 NavigationBar0}:
+      Surface: shown=true layer=0 alpha=1.0 rect=(0.0,0.0) 1440 x 180 transform=(1.0, 0.0, 1.0, 0.0)
+    mForceSeamlesslyRotate=false seamlesslyRotate: pending=null finishedFrameNumber=0
+    isOnScreen=true
+    isVisible=true
+    mIsTspNoteMode=false
+    isInsetProviderClientVisible=true
+    mHiddenWhileProfileLockedState=false
+    ITYPE_TOP_TAPPABLE_ELEMENT -> 
+  InsetsSourceProvider
+   mSource=    InsetsSource type=ITYPE_TOP_TAPPABLE_ELEMENT frame=[0,0][1440,139] visible=true
+   mFakeControl=    InsetsSourceControl type=ITYPE_TOP_TAPPABLE_ELEMENT mLeash=null mSurfacePosition=Point(0, 0) mControlledByPolicy=false
+ mIsLeashReadyForDispatching=true mImeOverrideFrame=Rect(0, 0 - 0, 0)   mWin=    mDisplayId=0 rootTaskId=1 mSession=Session{b7fdc0c 6318:u0a10060} mClient=android.os.BinderProxy@df6cde1
+    mOwnerUid=10060 showForAllUsers=true package=com.android.systemui appop=SYSTEM_INTERNAL_WINDOW
+    mAttrs={(0,0)(fillx138) gr=TOP CENTER_VERTICAL sim={adjust=pan} layoutInDisplayCutoutMode=always ty=STATUS_BAR fmt=TRANSLUCENT
+      fl=81000008
+      pfl=13000000 naviIconColor=0}
+    Requested w=1440 h=138 mLayoutSeq=1658
+    mHasSurface=true isReadyForDisplay()=true mWindowRemovalAllowed=false
+    ContainerAnimator:
+      mLeash=Surface(name=Surface(name=c91f3f4 StatusBar)/@0x56031f1 - animation-leash)/@0x452d00f mAnimationType=32
+      Animation: com.android.server.wm.InsetsSourceProvider$ControlAdapter@d9aeb96
+        ControlAdapter
+         mCapturedLeash=Surface(name=Surface(name=c91f3f4 StatusBar)/@0x56031f1 - animation-leash)/@0x452d00f    WindowStateAnimator{eba2399 StatusBar}:
+      Surface: shown=true layer=0 alpha=1.0 rect=(0.0,0.0) 1440 x 138 transform=(1.0, 0.0, 1.0, 0.0)
+    mForceSeamlesslyRotate=false seamlesslyRotate: pending=null finishedFrameNumber=0
+    mDrawLock=WakeLock{d6ff65e held=false, refCount=97}
+    isOnScreen=true
+    isVisible=true
+    mIsTspNoteMode=false
+    isInsetProviderClientVisible=true
+    mHiddenWhileProfileLockedState=false
+    ITYPE_RIGHT_GESTURES -> 
+  InsetsSourceProvider
+   mSource=    InsetsSource type=ITYPE_RIGHT_GESTURES frame=[1440,0][1440,3040] visible=true
+   mFakeControl=    InsetsSourceControl type=ITYPE_RIGHT_GESTURES mLeash=null mSurfacePosition=Point(0, 0) mControlledByPolicy=false
+ mIsLeashReadyForDispatching=true mImeOverrideFrame=Rect(0, 0 - 0, 0)   mWin=    mDisplayId=0 rootTaskId=1 mSession=Session{b7fdc0c 6318:u0a10060} mClient=android.os.BinderProxy@3f9fe09
+    mOwnerUid=10060 showForAllUsers=true package=com.android.systemui appop=SYSTEM_INTERNAL_WINDOW
+    mAttrs={(0,0)(fillxfill) sim={adjust=pan} ty=NAVIGATION_BAR fmt=TRANSLUCENT
+      fl=21840068
+      pfl=3000000
+      fitTypes=STATUS_BARS NAVIGATION_BARS CAPTION_BAR IME naviIconColor=0}
+    Requested w=1440 h=180 mLayoutSeq=1658
+    mHasSurface=true isReadyForDisplay()=true mWindowRemovalAllowed=false
+    ContainerAnimator:
+      mLeash=Surface(name=Surface(name=be8b22f NavigationBar0)/@0xb617344 - animation-leash)/@0x27a72a5 mAnimationType=32
+      Animation: com.android.server.wm.InsetsSourceProvider$ControlAdapter@43f4ab1
+        ControlAdapter
+         mCapturedLeash=Surface(name=Surface(name=be8b22f NavigationBar0)/@0xb617344 - animation-leash)/@0x27a72a5    WindowStateAnimator{f3dd2e3 NavigationBar0}:
+      Surface: shown=true layer=0 alpha=1.0 rect=(0.0,0.0) 1440 x 180 transform=(1.0, 0.0, 1.0, 0.0)
+    mForceSeamlesslyRotate=false seamlesslyRotate: pending=null finishedFrameNumber=0
+    isOnScreen=true
+    isVisible=true
+    mIsTspNoteMode=false
+    isInsetProviderClientVisible=true
+    mHiddenWhileProfileLockedState=false
+    ITYPE_LEFT_GESTURES -> 
+  InsetsSourceProvider
+   mSource=    InsetsSource type=ITYPE_LEFT_GESTURES frame=[0,0][0,3040] visible=true
+   mFakeControl=    InsetsSourceControl type=ITYPE_LEFT_GESTURES mLeash=null mSurfacePosition=Point(0, 0) mControlledByPolicy=false
+ mIsLeashReadyForDispatching=true mImeOverrideFrame=Rect(0, 0 - 0, 0)   mWin=    mDisplayId=0 rootTaskId=1 mSession=Session{b7fdc0c 6318:u0a10060} mClient=android.os.BinderProxy@3f9fe09
+    mOwnerUid=10060 showForAllUsers=true package=com.android.systemui appop=SYSTEM_INTERNAL_WINDOW
+    mAttrs={(0,0)(fillxfill) sim={adjust=pan} ty=NAVIGATION_BAR fmt=TRANSLUCENT
+      fl=21840068
+      pfl=3000000
+      fitTypes=STATUS_BARS NAVIGATION_BARS CAPTION_BAR IME naviIconColor=0}
+    Requested w=1440 h=180 mLayoutSeq=1658
+    mHasSurface=true isReadyForDisplay()=true mWindowRemovalAllowed=false
+    ContainerAnimator:
+      mLeash=Surface(name=Surface(name=be8b22f NavigationBar0)/@0xb617344 - animation-leash)/@0x27a72a5 mAnimationType=32
+      Animation: com.android.server.wm.InsetsSourceProvider$ControlAdapter@43f4ab1
+        ControlAdapter
+         mCapturedLeash=Surface(name=Surface(name=be8b22f NavigationBar0)/@0xb617344 - animation-leash)/@0x27a72a5    WindowStateAnimator{f3dd2e3 NavigationBar0}:
+      Surface: shown=true layer=0 alpha=1.0 rect=(0.0,0.0) 1440 x 180 transform=(1.0, 0.0, 1.0, 0.0)
+    mForceSeamlesslyRotate=false seamlesslyRotate: pending=null finishedFrameNumber=0
+    isOnScreen=true
+    isVisible=true
+    mIsTspNoteMode=false
+    isInsetProviderClientVisible=true
+    mHiddenWhileProfileLockedState=false
+    ITYPE_BOTTOM_GESTURES -> 
+  InsetsSourceProvider
+   mSource=    InsetsSource type=ITYPE_BOTTOM_GESTURES frame=[0,2860][1440,3040] visible=true
+   mFakeControl=    InsetsSourceControl type=ITYPE_BOTTOM_GESTURES mLeash=null mSurfacePosition=Point(0, 0) mControlledByPolicy=false
+ mIsLeashReadyForDispatching=true mImeOverrideFrame=Rect(0, 0 - 0, 0)   mWin=    mDisplayId=0 rootTaskId=1 mSession=Session{b7fdc0c 6318:u0a10060} mClient=android.os.BinderProxy@3f9fe09
+    mOwnerUid=10060 showForAllUsers=true package=com.android.systemui appop=SYSTEM_INTERNAL_WINDOW
+    mAttrs={(0,0)(fillxfill) sim={adjust=pan} ty=NAVIGATION_BAR fmt=TRANSLUCENT
+      fl=21840068
+      pfl=3000000
+      fitTypes=STATUS_BARS NAVIGATION_BARS CAPTION_BAR IME naviIconColor=0}
+    Requested w=1440 h=180 mLayoutSeq=1658
+    mHasSurface=true isReadyForDisplay()=true mWindowRemovalAllowed=false
+    ContainerAnimator:
+      mLeash=Surface(name=Surface(name=be8b22f NavigationBar0)/@0xb617344 - animation-leash)/@0x27a72a5 mAnimationType=32
+      Animation: com.android.server.wm.InsetsSourceProvider$ControlAdapter@43f4ab1
+        ControlAdapter
+         mCapturedLeash=Surface(name=Surface(name=be8b22f NavigationBar0)/@0xb617344 - animation-leash)/@0x27a72a5    WindowStateAnimator{f3dd2e3 NavigationBar0}:
+      Surface: shown=true layer=0 alpha=1.0 rect=(0.0,0.0) 1440 x 180 transform=(1.0, 0.0, 1.0, 0.0)
+    mForceSeamlesslyRotate=false seamlesslyRotate: pending=null finishedFrameNumber=0
+    isOnScreen=true
+    isVisible=true
+    mIsTspNoteMode=false
+    isInsetProviderClientVisible=true
+    mHiddenWhileProfileLockedState=false
+    ITYPE_TOP_GESTURES -> 
+  InsetsSourceProvider
+   mSource=    InsetsSource type=ITYPE_TOP_GESTURES frame=[0,0][1440,139] visible=true
+   mFakeControl=    InsetsSourceControl type=ITYPE_TOP_GESTURES mLeash=null mSurfacePosition=Point(0, 0) mControlledByPolicy=false
+ mIsLeashReadyForDispatching=true mImeOverrideFrame=Rect(0, 0 - 0, 0)   mWin=    mDisplayId=0 rootTaskId=1 mSession=Session{b7fdc0c 6318:u0a10060} mClient=android.os.BinderProxy@df6cde1
+    mOwnerUid=10060 showForAllUsers=true package=com.android.systemui appop=SYSTEM_INTERNAL_WINDOW
+    mAttrs={(0,0)(fillx138) gr=TOP CENTER_VERTICAL sim={adjust=pan} layoutInDisplayCutoutMode=always ty=STATUS_BAR fmt=TRANSLUCENT
+      fl=81000008
+      pfl=13000000 naviIconColor=0}
+    Requested w=1440 h=138 mLayoutSeq=1658
+    mHasSurface=true isReadyForDisplay()=true mWindowRemovalAllowed=false
+    ContainerAnimator:
+      mLeash=Surface(name=Surface(name=c91f3f4 StatusBar)/@0x56031f1 - animation-leash)/@0x452d00f mAnimationType=32
+      Animation: com.android.server.wm.InsetsSourceProvider$ControlAdapter@d9aeb96
+        ControlAdapter
+         mCapturedLeash=Surface(name=Surface(name=c91f3f4 StatusBar)/@0x56031f1 - animation-leash)/@0x452d00f    WindowStateAnimator{eba2399 StatusBar}:
+      Surface: shown=true layer=0 alpha=1.0 rect=(0.0,0.0) 1440 x 138 transform=(1.0, 0.0, 1.0, 0.0)
+    mForceSeamlesslyRotate=false seamlesslyRotate: pending=null finishedFrameNumber=0
+    mDrawLock=WakeLock{d6ff65e held=false, refCount=97}
+    isOnScreen=true
+    isVisible=true
+    mIsTspNoteMode=false
+    isInsetProviderClientVisible=true
+    mHiddenWhileProfileLockedState=false
+    ITYPE_NAVIGATION_BAR -> 
+  InsetsSourceProvider
+   mSource=    InsetsSource type=ITYPE_NAVIGATION_BAR frame=[0,2860][1440,3040] visible=true
+   mControl=    InsetsSourceControl type=ITYPE_NAVIGATION_BAR mLeash=Surface(name=Surface(name=be8b22f NavigationBar0)/@0xb617344 - animation-leash)/@0x27a72a5 mSurfacePosition=Point(0, 2860) mControlledByPolicy=false
+   mFakeControl=    InsetsSourceControl type=ITYPE_NAVIGATION_BAR mLeash=null mSurfacePosition=Point(0, 0) mControlledByPolicy=false
+ mIsLeashReadyForDispatching=true mImeOverrideFrame=Rect(0, 2860 - 1440, 3040)   mWin=    mDisplayId=0 rootTaskId=1 mSession=Session{b7fdc0c 6318:u0a10060} mClient=android.os.BinderProxy@3f9fe09
+    mOwnerUid=10060 showForAllUsers=true package=com.android.systemui appop=SYSTEM_INTERNAL_WINDOW
+    mAttrs={(0,0)(fillxfill) sim={adjust=pan} ty=NAVIGATION_BAR fmt=TRANSLUCENT
+      fl=21840068
+      pfl=3000000
+      fitTypes=STATUS_BARS NAVIGATION_BARS CAPTION_BAR IME naviIconColor=0}
+    Requested w=1440 h=180 mLayoutSeq=1658
+    mHasSurface=true isReadyForDisplay()=true mWindowRemovalAllowed=false
+    ContainerAnimator:
+      mLeash=Surface(name=Surface(name=be8b22f NavigationBar0)/@0xb617344 - animation-leash)/@0x27a72a5 mAnimationType=32
+      Animation: com.android.server.wm.InsetsSourceProvider$ControlAdapter@43f4ab1
+        ControlAdapter
+         mCapturedLeash=Surface(name=Surface(name=be8b22f NavigationBar0)/@0xb617344 - animation-leash)/@0x27a72a5    WindowStateAnimator{f3dd2e3 NavigationBar0}:
+      Surface: shown=true layer=0 alpha=1.0 rect=(0.0,0.0) 1440 x 180 transform=(1.0, 0.0, 1.0, 0.0)
+    mForceSeamlesslyRotate=false seamlesslyRotate: pending=null finishedFrameNumber=0
+    isOnScreen=true
+    isVisible=true
+    mIsTspNoteMode=false
+    isInsetProviderClientVisible=true
+    mHiddenWhileProfileLockedState=false
+   mAdapter=    ControlAdapter
+     mCapturedLeash=Surface(name=Surface(name=be8b22f NavigationBar0)/@0xb617344 - animation-leash)/@0x27a72a5   mControlTarget=    mDisplayId=0 rootTaskId=7274 mSession=Session{88ea464 28427:u0a10299} mClient=android.os.BinderProxy@d5b2bb3
+    mOwnerUid=10299 showForAllUsers=false package=com.stegano.myjavaapplication appop=NONE
+    mAttrs={(0,0)(fillxfill) sim={adjust=pan forwardNavigation} ty=BASE_APPLICATION wanim=0x1030304
+      fl=81810100
+      pfl=12020000
+      apr=LIGHT_NAVIGATION_BARS
+      fitSides= naviIconColor=0
+      sfl=100000}
+    Requested w=1440 h=3040 mLayoutSeq=1658
+    mHasSurface=true isReadyForDisplay()=true mWindowRemovalAllowed=false
+    WindowStateAnimator{afcee3b com.stegano.myjavaapplication/com.stegano.myjavaapplication.TestActivity}:
+      Surface: shown=true layer=0 alpha=1.0 rect=(0.0,0.0) 1440 x 3040 transform=(1.0, 0.0, 1.0, 0.0)
+    mForceSeamlesslyRotate=false seamlesslyRotate: pending=null finishedFrameNumber=0
+    isOnScreen=true
+    isVisible=true
+    mIsTspNoteMode=false
+    mHiddenWhileProfileLockedState=false
+    ITYPE_STATUS_BAR -> 
+  InsetsSourceProvider
+   mSource=    InsetsSource type=ITYPE_STATUS_BAR frame=[0,0][1440,139] visible=true
+   mControl=    InsetsSourceControl type=ITYPE_STATUS_BAR mLeash=Surface(name=Surface(name=c91f3f4 StatusBar)/@0x56031f1 - animation-leash)/@0x452d00f mSurfacePosition=Point(0, 0) mControlledByPolicy=false
+   mFakeControl=    InsetsSourceControl type=ITYPE_STATUS_BAR mLeash=null mSurfacePosition=Point(0, 0) mControlledByPolicy=false
+ mIsLeashReadyForDispatching=true mImeOverrideFrame=Rect(0, 0 - 0, 0)   mWin=    mDisplayId=0 rootTaskId=1 mSession=Session{b7fdc0c 6318:u0a10060} mClient=android.os.BinderProxy@df6cde1
+    mOwnerUid=10060 showForAllUsers=true package=com.android.systemui appop=SYSTEM_INTERNAL_WINDOW
+    mAttrs={(0,0)(fillx138) gr=TOP CENTER_VERTICAL sim={adjust=pan} layoutInDisplayCutoutMode=always ty=STATUS_BAR fmt=TRANSLUCENT
+      fl=81000008
+      pfl=13000000 naviIconColor=0}
+    Requested w=1440 h=138 mLayoutSeq=1658
+    mHasSurface=true isReadyForDisplay()=true mWindowRemovalAllowed=false
+    ContainerAnimator:
+      mLeash=Surface(name=Surface(name=c91f3f4 StatusBar)/@0x56031f1 - animation-leash)/@0x452d00f mAnimationType=32
+      Animation: com.android.server.wm.InsetsSourceProvider$ControlAdapter@d9aeb96
+        ControlAdapter
+         mCapturedLeash=Surface(name=Surface(name=c91f3f4 StatusBar)/@0x56031f1 - animation-leash)/@0x452d00f    WindowStateAnimator{eba2399 StatusBar}:
+      Surface: shown=true layer=0 alpha=1.0 rect=(0.0,0.0) 1440 x 138 transform=(1.0, 0.0, 1.0, 0.0)
+    mForceSeamlesslyRotate=false seamlesslyRotate: pending=null finishedFrameNumber=0
+    mDrawLock=WakeLock{d6ff65e held=false, refCount=97}
+    isOnScreen=true
+    isVisible=true
+    mIsTspNoteMode=false
+    isInsetProviderClientVisible=true
+    mHiddenWhileProfileLockedState=false
+   mAdapter=    ControlAdapter
+     mCapturedLeash=Surface(name=Surface(name=c91f3f4 StatusBar)/@0x56031f1 - animation-leash)/@0x452d00f   mControlTarget=    mDisplayId=0 rootTaskId=7274 mSession=Session{88ea464 28427:u0a10299} mClient=android.os.BinderProxy@d5b2bb3
+    mOwnerUid=10299 showForAllUsers=false package=com.stegano.myjavaapplication appop=NONE
+    mAttrs={(0,0)(fillxfill) sim={adjust=pan forwardNavigation} ty=BASE_APPLICATION wanim=0x1030304
+      fl=81810100
+      pfl=12020000
+      apr=LIGHT_NAVIGATION_BARS
+      fitSides= naviIconColor=0
+      sfl=100000}
+    Requested w=1440 h=3040 mLayoutSeq=1658
+    mHasSurface=true isReadyForDisplay()=true mWindowRemovalAllowed=false
+    WindowStateAnimator{afcee3b com.stegano.myjavaapplication/com.stegano.myjavaapplication.TestActivity}:
+      Surface: shown=true layer=0 alpha=1.0 rect=(0.0,0.0) 1440 x 3040 transform=(1.0, 0.0, 1.0, 0.0)
+    mForceSeamlesslyRotate=false seamlesslyRotate: pending=null finishedFrameNumber=0
+    isOnScreen=true
+    isVisible=true
+    mIsTspNoteMode=false
+    mHiddenWhileProfileLockedState=false
+
+  KeyguardController:
+    mKeyguardShowing=false
+    mAodShowing=false
+    mKeyguardGoingAway=false
+    Occluded=false DismissingKeyguardActivity=null at display=0
+    mDismissalRequested=false
+
+  LockTaskController:
+    mLockTaskModeState=NONE
+    mLockTaskModeTasks=
+    mLockTaskPackages (userId:packages)=
+      u0:[]
+      u150:[]
+
+  mCurTaskIdForUser={0=7274}
+  mUserStackInFront={}
+  mVisibilityTransactionDepth=0
+  isHomeRecentsComponent=true
+
+  TaskOrganizerController:
+    Per windowing mode:
+      pinned:
+        android.window.ITaskOrganizer$Stub$Proxy@c006055 uid=10060:
+      split-screen-primary:
+        android.window.ITaskOrganizer$Stub$Proxy@411a6a uid=10060:
+          Task{32c7bb5 #3 visible=false type=undefined mode=split-screen-primary translucent=true ?? U=0 StackId=3 sz=0}
+          Task{aa0024a #4 visible=false type=undefined mode=split-screen-secondary translucent=true ?? U=0 StackId=4 sz=0}
+      split-screen-secondary:
+        android.window.ITaskOrganizer$Stub$Proxy@411a6a uid=10060:
+          Task{32c7bb5 #3 visible=false type=undefined mode=split-screen-primary translucent=true ?? U=0 StackId=3 sz=0}
+          Task{aa0024a #4 visible=false type=undefined mode=split-screen-secondary translucent=true ?? U=0 StackId=4 sz=0}
+
+PACKAGE SETTINGS MANAGER
+  mCurrentDisplayAspectRatio=1.8896  mHasDisplayCutout=true
+

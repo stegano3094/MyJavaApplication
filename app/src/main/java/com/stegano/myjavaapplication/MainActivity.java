@@ -3,11 +3,8 @@ package com.stegano.myjavaapplication;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
-import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
-import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -39,6 +36,8 @@ public class MainActivity extends BaseActivity {
 
     public Button nextActivityBtn;
     public Button nextActivityBtn2;
+    public Button nextActivityBtn3;
+    public Button nextActivityBtn4;
     public TextView resultTxt;
 
 
@@ -76,6 +75,12 @@ public class MainActivity extends BaseActivity {
             startActivity(intent);
         });
 
+        nextActivityBtn3 = findViewById(R.id.nextActivityBtn3);
+        nextActivityBtn3.setOnClickListener(v -> {
+            Intent intent = new Intent(mContext, ForegroundServiceActivity.class);
+            startActivity(intent);
+        });
+
         // 레트로핏을 이용하여 텍스트뷰에 결과 넣기
         resultTxt = (TextView) findViewById(R.id.resultTxt);
         Retrofit retrofit = RetrofitFactory.createRetrofit("https://jsonplaceholder.typicode.com/");
@@ -89,6 +94,7 @@ public class MainActivity extends BaseActivity {
                     return;
                 }
 
+                resultTxt.setText("");  // 기존에 있던 문자는 제거
                 List<PostData> postData = response.body();
                 for(PostData post : postData) {
                     String content = "";
