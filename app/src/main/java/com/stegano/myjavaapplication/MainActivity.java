@@ -38,6 +38,8 @@ public class MainActivity extends BaseActivity {
     public Button nextActivityBtn2;
     public Button nextActivityBtn3;
     public Button nextActivityBtn4;
+    public Button nextActivityBtn5;
+
     public TextView resultTxt;
 
 
@@ -78,6 +80,18 @@ public class MainActivity extends BaseActivity {
         nextActivityBtn3 = findViewById(R.id.nextActivityBtn3);
         nextActivityBtn3.setOnClickListener(v -> {
             Intent intent = new Intent(mContext, ForegroundServiceActivity.class);
+            startActivity(intent);
+        });
+
+        nextActivityBtn4 = findViewById(R.id.nextActivityBtn4);
+        nextActivityBtn4.setOnClickListener(v -> {
+            Intent intent = new Intent(mContext, NotificationActivity.class);
+            startActivity(intent);
+        });
+
+        nextActivityBtn5 = findViewById(R.id.nextActivityBtn5);
+        nextActivityBtn5.setOnClickListener(v -> {
+            Intent intent = new Intent(mContext, RecyclerViewActivity.class);
             startActivity(intent);
         });
 

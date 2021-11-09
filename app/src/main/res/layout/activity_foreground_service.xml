@@ -5,31 +5,36 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:layout_margin="20dp"
     tools:context=".ForegroundServiceActivity">
 
     <Button
         android:id="@+id/onStartService"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
         android:text="서비스 시작" />
 
     <Button
         android:id="@+id/onStopService"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
         android:text="서비스 중지" />
 
     <Button
         android:id="@+id/onStartForegroundService"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
         android:text="포그라운드 서비스 시작" />
 
 
     <Button
         android:id="@+id/getCountValue"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
         android:text="카운팅 값 출력" />
 
 </LinearLayout>

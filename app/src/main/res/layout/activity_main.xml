@@ -9,39 +9,63 @@
     android:layout_margin="20dp"
     android:orientation="vertical">
 
-    <Button
-        android:id="@+id/nextActivityBtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="다음 화면으로1" />
-
-    <Button
-        android:id="@+id/nextActivityBtn2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TestActivity 화면으로"
-        android:textAllCaps="false"/>
-
-    <Button
-        android:id="@+id/nextActivityBtn3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Service 화면으로"
-        android:textAllCaps="false"/>
-
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/resultTxt"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:fontFamily="@font/hs_new"
-            android:scrollbars="vertical"
-            android:text="TextView" />
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
+            <Button
+                android:id="@+id/nextActivityBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="다음 화면으로1" />
+
+            <Button
+                android:id="@+id/nextActivityBtn2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TestActivity 화면으로"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/nextActivityBtn3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Service 화면으로"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/nextActivityBtn4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="알림 화면으로"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/nextActivityBtn5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="RecyclerView 화면으로"
+                android:textAllCaps="false"/>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/resultTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/hs_new"
+                    android:scrollbars="vertical"
+                    android:text="TextView" />
+
+            </ScrollView>
+        </LinearLayout>
     </ScrollView>
-
 </LinearLayout>
