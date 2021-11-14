@@ -4,7 +4,10 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" /> <!-- 위험권한 : 앱설치 후에도 사용자에게 권한을 받아야 함 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -14,18 +17,29 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyJavaApplication"
         android:usesCleartextTraffic="true">
-        <activity
-            android:name=".RecyclerViewActivity"
-            android:exported="false" />
-        <activity
-            android:name=".NotificationActivity"
-            android:exported="false" />
+
+        <!-- 다른 맵을 쓰더라도 키로 인증하고 받아오도록 되어있음 -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCnbKFRBpbUeDPCi8-YltKrlYaZ_tOrbuc" />
 
         <service
             android:name=".MyService"
             android:enabled="true"
             android:exported="true" />
 
+        <activity
+            android:name=".ThreadActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GoogleMapActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RecyclerViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NotificationActivity"
+            android:exported="false" />
         <activity
             android:name=".ForegroundServiceActivity"
             android:exported="false" />
@@ -50,13 +64,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".ViewStoreDetailActivity"
             android:exported="true" />
+
         <activity
             android:name=".TestActivity"
             android:exported="true"
             android:screenOrientation="portrait" /> <!-- 세로방향 고정 -->
+
         <activity
             android:name=".MainActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"

@@ -52,6 +52,27 @@
                 android:text="RecyclerView 화면으로"
                 android:textAllCaps="false"/>
 
+            <Button
+                android:id="@+id/nextActivityBtn6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="구글 맵 화면으로"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/nextActivityBtn7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="스레드 화면으로"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/nextActivityBtn8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="123123 화면으로"
+                android:textAllCaps="false" />
+
             <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

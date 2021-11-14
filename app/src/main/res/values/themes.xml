@@ -14,6 +14,15 @@
         <!-- Customize your theme here. -->
 
         <!-- 폰트 전체 적용 -->
-<!--        <item name="fontFamily">@font/hs_new</item>-->
+        <!--        <item name="fontFamily">@font/hs_new</item>-->
     </style>
+
+    <style name="Theme.MyJavaApplication.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.MyJavaApplication.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.MyJavaApplication.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

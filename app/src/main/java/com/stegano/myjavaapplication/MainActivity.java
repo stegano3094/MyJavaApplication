@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -26,6 +27,8 @@ import com.stegano.myjavaapplication.staticclass.RetrofitFactory;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -39,6 +42,9 @@ public class MainActivity extends BaseActivity {
     public Button nextActivityBtn3;
     public Button nextActivityBtn4;
     public Button nextActivityBtn5;
+    public Button nextActivityBtn6;
+    public Button nextActivityBtn7;
+    public Button nextActivityBtn8;
 
     public TextView resultTxt;
 
@@ -47,6 +53,25 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+        Log.d(TAG, "onCreate() getWindow().addFlags()");
+
+        Timer timer = new Timer();
+        TimerTask timerTask = new TimerTask() {
+            @Override
+            public void run() {
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+                        Log.d(TAG, "onCreate() timerTask getWindow().clearFlags()");
+                    }
+                });
+
+            }
+        };
+        timer.schedule(timerTask, 30000);  // 300초 뒤 실행 -> 화면 꺼짐 가능
+
 
         setupEvents();
         setValues();
@@ -92,6 +117,24 @@ public class MainActivity extends BaseActivity {
         nextActivityBtn5 = findViewById(R.id.nextActivityBtn5);
         nextActivityBtn5.setOnClickListener(v -> {
             Intent intent = new Intent(mContext, RecyclerViewActivity.class);
+            startActivity(intent);
+        });
+
+        nextActivityBtn6 = findViewById(R.id.nextActivityBtn6);
+        nextActivityBtn6.setOnClickListener(v -> {
+            Intent intent = new Intent(mContext, GoogleMapActivity.class);
+            startActivity(intent);
+        });
+
+        nextActivityBtn7 = findViewById(R.id.nextActivityBtn7);
+        nextActivityBtn7.setOnClickListener(v -> {
+            Intent intent = new Intent(mContext, ThreadActivity.class);
+            startActivity(intent);
+        });
+
+        nextActivityBtn8 = findViewById(R.id.nextActivityBtn8);
+        nextActivityBtn8.setOnClickListener(v -> {
+            Intent intent = new Intent(mContext, ThreadActivity.class);
             startActivity(intent);
         });
 
