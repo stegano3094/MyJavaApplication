@@ -4,11 +4,13 @@ public class RecyclerViewItem {
     private String id;
     private String english;
     private String korean;
+    private boolean isChecked;
 
-    public RecyclerViewItem(String id, String english, String korean) {
+    public RecyclerViewItem(String id, String english, String korean, boolean isChecked) {
         this.id = id;
         this.english = english;
         this.korean = korean;
+        this.isChecked = isChecked;
     }
 
     public String getId() {
@@ -33,5 +35,13 @@ public class RecyclerViewItem {
 
     public void setKorean(String korean) {
         this.korean = korean;
+    }
+
+    public boolean getIsChecked() {
+        return isChecked;
+    }
+
+    public void setIsChecked(boolean isChecked) {
+        this.isChecked = isChecked;
     }
 }

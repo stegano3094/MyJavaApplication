@@ -1,30 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="50dp"
-    android:orientation="horizontal"
+    android:layout_margin="4dp"
     android:gravity="center_vertical">
 
-    <TextView
-        android:id="@+id/idListItem"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="12333"
-        android:layout_weight="1"/>
+    <LinearLayout
+        android:id="@+id/cardItem"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/englishListItem"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="abcd"
-        android:layout_weight="1" />
+        <TextView
+            android:id="@+id/idListItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="12333" />
 
-    <TextView
-        android:id="@+id/koreanListItem"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="가나다라"
-        android:layout_weight="1" />
+        <TextView
+            android:id="@+id/englishListItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="abcd" />
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/koreanListItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="가나다라" />
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

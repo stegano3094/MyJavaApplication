@@ -6,9 +6,11 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.stegano.myjavaapplication.adapters.RecyclerViewAdapter;
 import com.stegano.myjavaapplication.dto.RecyclerViewItem;
@@ -16,8 +18,11 @@ import com.stegano.myjavaapplication.dto.RecyclerViewItem;
 import java.util.ArrayList;
 
 public class RecyclerViewActivity extends AppCompatActivity {
+    private static final String TAG = "RecyclerViewActivity";
+
     RecyclerView recyclerView;
     Button addItemBtn;
+    Button deleteItemBtn;
 
     private ArrayList<RecyclerViewItem> arrayList;
     private RecyclerViewAdapter recyclerViewAdapter;
@@ -34,11 +39,10 @@ public class RecyclerViewActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(linearLayoutManager);
 
         arrayList = new ArrayList<>();
-
         recyclerViewAdapter = new RecyclerViewAdapter(arrayList);
-        DividerItemDecoration dividerItemDecoration =
-                new DividerItemDecoration(recyclerView.getContext(), linearLayoutManager.getOrientation());
-        recyclerView.addItemDecoration(dividerItemDecoration);
+//        DividerItemDecoration dividerItemDecoration =
+//                new DividerItemDecoration(recyclerView.getContext(), linearLayoutManager.getOrientation());
+//        recyclerView.addItemDecoration(dividerItemDecoration);
         recyclerView.setAdapter(recyclerViewAdapter);
 
         // "데이터 추가하기" 클릭 시 데이터 추가 후 갱신
@@ -48,12 +52,28 @@ public class RecyclerViewActivity extends AppCompatActivity {
             public void onClick(View v) {
                 count++;
 
-                RecyclerViewItem item = new RecyclerViewItem(count+"", "Apple", "사과");
+                RecyclerViewItem item = new RecyclerViewItem(count+"", "Apple" + count, "사과" + count, false);
                 arrayList.add(item);  // 마지막에 삽입
 //                arrayList.add(2, item);  // 중간에 삽입
 
+                recyclerView.scrollToPosition(arrayList.size()-1);  // 맨 아래로 스크롤
                 recyclerViewAdapter.notifyDataSetChanged();
             }
         });
+
+        deleteItemBtn = (Button) findViewById(R.id.deleteItemBtn);
+        deleteItemBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.e(TAG, "---------------------------");
+                for (RecyclerViewItem aaa : arrayList) {
+                    Log.d(TAG, "getId : " + aaa.getId());
+                    Log.d(TAG, "getKorean : " + aaa.getKorean());
+                    Log.d(TAG, "getEnglish : " + aaa.getEnglish());
+                    Log.d(TAG, "getIsChecked : " + aaa.getIsChecked());
+                }
+            }
+        });
     }
+
 }
