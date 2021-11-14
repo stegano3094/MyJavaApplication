@@ -1,19 +1,23 @@
 package com.stegano.myjavaapplication.adapters;
 
+import android.annotation.SuppressLint;
+import android.content.Context;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.GridLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.stegano.myjavaapplication.R;
-import com.stegano.myjavaapplication.dto.RecyclerViewItem;
 
 import java.util.ArrayList;
 
@@ -21,6 +25,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     private static final String TAG = "RecyclerViewAdapter";
 
     private ArrayList<RecyclerViewItem> mList;
+    private Context mContext;
 
     // Adapter를 생성시 리스트를 받아오고 mList에 넣어줌
     public RecyclerViewAdapter(ArrayList<RecyclerViewItem> list) {
@@ -33,7 +38,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public RecyclerViewAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         Log.d(TAG, "onCreateViewHolder()");
 
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_recyclerview, parent, false);
+        this.mContext = parent.getContext();
+
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recyclerview_item, parent, false);
         MyViewHolder myViewHolder = new MyViewHolder(view);
 
         return myViewHolder;
@@ -41,7 +48,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     // 실제 동작에 관한 기능을 구현 (onCreateViewHolder() -> onBindViewHolder()가 호출됨)
     @Override
-    public void onBindViewHolder(@NonNull RecyclerViewAdapter.MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull RecyclerViewAdapter.MyViewHolder holder, @SuppressLint("RecyclerView") int position) {
         Log.d(TAG, "onBindViewHolder() position : " + position);
 
         holder.id.setText(mList.get(position).getId());
@@ -64,6 +71,17 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             }
         });
 
+        // 서브 리사이클러뷰
+        LinearLayoutManager linearLayoutManager;
+        if(mList.get(position).getSubject() == 0) {
+            linearLayoutManager = new LinearLayoutManager(mContext, LinearLayoutManager.HORIZONTAL, false);
+        } else {
+            linearLayoutManager = new LinearLayoutManager(mContext, LinearLayoutManager.VERTICAL, false);
+        }
+        holder.recyclerview2.setLayoutManager(linearLayoutManager);
+        RecyclerView2Adapter recyclerView2Adapter = new RecyclerView2Adapter(mList.get(position).getSubList());
+        holder.recyclerview2.setAdapter(recyclerView2Adapter);
+
     }
 
     @Override
@@ -79,6 +97,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         protected TextView english;
         protected TextView korean;
         protected CheckBox checkBox;
+        protected RecyclerView recyclerview2;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -88,6 +107,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             this.english = itemView.findViewById(R.id.englishListItem);
             this.korean = itemView.findViewById(R.id.koreanListItem);
             this.checkBox = itemView.findViewById(R.id.checkBox);
+            this.recyclerview2 = itemView.findViewById(R.id.recyclerview2);
         }
     }
 }

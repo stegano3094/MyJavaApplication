@@ -37,7 +37,7 @@ public class SplashActivity extends BaseActivity {
         splashTextView = findViewById(R.id.splashTextView);
 
         try {
-            Thread.sleep(2000);
+            Thread.sleep(100);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

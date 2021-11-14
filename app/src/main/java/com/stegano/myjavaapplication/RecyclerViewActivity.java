@@ -1,7 +1,6 @@
 package com.stegano.myjavaapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -9,11 +8,10 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.LinearLayout;
-import android.widget.Toast;
 
+import com.stegano.myjavaapplication.adapters.RecyclerView2Item;
 import com.stegano.myjavaapplication.adapters.RecyclerViewAdapter;
-import com.stegano.myjavaapplication.dto.RecyclerViewItem;
+import com.stegano.myjavaapplication.adapters.RecyclerViewItem;
 
 import java.util.ArrayList;
 
@@ -25,6 +23,7 @@ public class RecyclerViewActivity extends AppCompatActivity {
     Button deleteItemBtn;
 
     private ArrayList<RecyclerViewItem> arrayList;
+    private ArrayList<RecyclerView2Item> subArrayList;
     private RecyclerViewAdapter recyclerViewAdapter;
     private int count = -1;
 
@@ -39,6 +38,8 @@ public class RecyclerViewActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(linearLayoutManager);
 
         arrayList = new ArrayList<>();
+        subArrayList = new ArrayList<>();
+
         recyclerViewAdapter = new RecyclerViewAdapter(arrayList);
 //        DividerItemDecoration dividerItemDecoration =
 //                new DividerItemDecoration(recyclerView.getContext(), linearLayoutManager.getOrientation());
@@ -52,9 +53,16 @@ public class RecyclerViewActivity extends AppCompatActivity {
             public void onClick(View v) {
                 count++;
 
-                RecyclerViewItem item = new RecyclerViewItem(count+"", "Apple" + count, "사과" + count, false);
+                subArrayList.clear();
+                for (int i = 0; i < (int)(Math.random() * 10 + 1); i++) {
+                    subArrayList.add(new RecyclerView2Item("123", "" + (int)(Math.random() * 10 + 1)));
+                }
+
+                // count%2 -> 0, 1이 번갈아 나오게 하기 위해서
+                RecyclerViewItem item = new RecyclerViewItem(0, count+"", "Apple" + count, "사과" + count, false, subArrayList);
                 arrayList.add(item);  // 마지막에 삽입
 //                arrayList.add(2, item);  // 중간에 삽입
+
 
                 recyclerView.scrollToPosition(arrayList.size()-1);  // 맨 아래로 스크롤
                 recyclerViewAdapter.notifyDataSetChanged();
@@ -82,6 +90,15 @@ public class RecyclerViewActivity extends AppCompatActivity {
                 recyclerViewAdapter.notifyDataSetChanged();
             }
         });
+
+        String a = "dkalsfjdsklf";
+
+        testing(a);
+
+        Log.d(TAG, "a : "+ a);
     }
 
+    public void testing(String a) {
+        a = "dfneaklfnsagk";
+    }
 }
