@@ -66,12 +66,20 @@ public class RecyclerViewActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Log.e(TAG, "---------------------------");
-                for (RecyclerViewItem aaa : arrayList) {
-                    Log.d(TAG, "getId : " + aaa.getId());
-                    Log.d(TAG, "getKorean : " + aaa.getKorean());
-                    Log.d(TAG, "getEnglish : " + aaa.getEnglish());
-                    Log.d(TAG, "getIsChecked : " + aaa.getIsChecked());
+                for (int i = 0; i < arrayList.size(); i++) {
+                    Log.d(TAG, "getId : " + arrayList.get(i).getId());
+                    Log.d(TAG, "getKorean : " + arrayList.get(i).getKorean());
+                    Log.d(TAG, "getEnglish : " + arrayList.get(i).getEnglish());
+                    Log.d(TAG, "getIsChecked : " + arrayList.get(i).getIsChecked());
+
+                    if (arrayList.get(i).getIsChecked() == true) {
+                        Log.d(TAG, "arrayList.remove(" + i + ")");
+                        arrayList.remove(i);
+                        i--;
+                    }
                 }
+
+                recyclerViewAdapter.notifyDataSetChanged();
             }
         });
     }
