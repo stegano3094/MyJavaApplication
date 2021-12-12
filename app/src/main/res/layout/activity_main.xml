@@ -22,13 +22,14 @@
                 android:id="@+id/nextActivityBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="다음 화면으로1" />
+                android:text="TestActivity 화면으로"
+                android:textAllCaps="false"/>
 
             <Button
                 android:id="@+id/nextActivityBtn2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TestActivity 화면으로"
+                android:text="다음 화면으로1"
                 android:textAllCaps="false"/>
 
             <Button
@@ -70,7 +71,21 @@
                 android:id="@+id/nextActivityBtn8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="123123 화면으로"
+                android:text="BroadcastReceiver 화면으로"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/nextActivityBtn9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Socket 화면으로"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/nextActivityBtn10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="HTTP 화면으로"
                 android:textAllCaps="false" />
 
             <ScrollView

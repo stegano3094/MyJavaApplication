@@ -24,6 +24,12 @@
                 android:text="Thread" />
 
             <Button
+                android:id="@+id/threadBtn2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Thread + Handler" />
+
+            <Button
                 android:id="@+id/runnableBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

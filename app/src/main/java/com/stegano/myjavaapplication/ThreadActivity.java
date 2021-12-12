@@ -24,6 +24,9 @@ public class ThreadActivity extends AppCompatActivity {
     private static final String TAG = "ThreadActivity";
 
     Button threadBtn;
+    Button threadBtn2;
+    MainHandler mainHandler;
+    Handler mainHandler2 = new Handler();
     Button runnableBtn;
     Button asyncTaskBtn;
     Button timerBtn;
@@ -42,6 +45,7 @@ public class ThreadActivity extends AppCompatActivity {
         mActivity = this;
 
         threadBtn = findViewById(R.id.threadBtn);
+        threadBtn2 = findViewById(R.id.threadBtn2);
         runnableBtn = findViewById(R.id.runnableBtn);
         asyncTaskBtn = findViewById(R.id.asyncTaskBtn);
         timerBtn = findViewById(R.id.timerBtn);
@@ -54,6 +58,17 @@ public class ThreadActivity extends AppCompatActivity {
                 // 같은 Thread 객체가 start()를 두 번 이상 호출하면 앱이 종료됨.
                 // 반드시 if(thread == null) 인지 확인하고 돌리길
                 Thread thread = new MyThread();  // Thread 상속
+                thread.start();
+            }
+        });
+
+        mainHandler = new MainHandler();
+        threadBtn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // 같은 Thread 객체가 start()를 두 번 이상 호출하면 앱이 종료됨.
+                // 반드시 if(thread == null) 인지 확인하고 돌리길
+                Thread thread = new BackgroundThread();  // Thread 상속
                 thread.start();
             }
         });
@@ -150,12 +165,18 @@ public class ThreadActivity extends AppCompatActivity {
                     });
 
                     // 방법 2. handler를 구현해서 사용하는 방법 (스레드에서 핸들러 생성 시 오류 발생)
-                    handler.post(new Runnable() {  // post()는 바로 실행, postDelayed()는 지연시간 후에 실행
+                    handler.post(new Runnable() {  // post()는 바로 실행
                         @Override
                         public void run() {
                             resultTxt.append("\nhandler 왔어용 count : " + count);
                         }
                     });
+//                    handler.postDelayed(new Runnable() {  // postDelayed()는 지연시간 후에 실행
+//                        @Override
+//                        public void run() {
+//                            resultTxt.append("\nhandler 왔어용 count : " + count);
+//                        }
+//                    }, 1000);
 
                     // handler 구현 방법 2
                     handler2.sendEmptyMessage(i);  // sendEmptyMessage()를 사용하면 handleMessage()가 호출됨
@@ -164,7 +185,8 @@ public class ThreadActivity extends AppCompatActivity {
                     resultTxt.post(new Runnable() {
                         @Override
                         public void run() {
-                            resultTxt.append("\nView 왔어용 count : " + count);
+//                            resultTxt.append("\nView 왔어용 count : " + count);
+                            resultTxt.setText("\nView 왔어용 count : " + count);
                         }
                     });
 
@@ -187,6 +209,50 @@ public class ThreadActivity extends AppCompatActivity {
 //            Toast.makeText(mActivity.getApplicationContext(), "msg.what : " + msg.what, Toast.LENGTH_SHORT).show();
         }
     };
+
+    // Thread2 --------------------------------------------------------------------------------------
+    class BackgroundThread extends Thread {
+        int value = 0;
+
+        public void run() {
+            for (int i = 0; i < 30; i++) {
+                try {
+                    Thread.sleep(1000);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+
+                value += 1;
+                Log.d(TAG, "BackgroundThread value : " + value);
+
+                // 핸들러를 이용하는 방법
+//                Message message = mainHandler.obtainMessage();
+//                Bundle bundle = new Bundle();
+//                bundle.putInt("value", value);
+//                message.setData(bundle);
+//                mainHandler.sendMessage(message);  // 핸들러로 메시지 객체 보냄
+
+                // 러너블을 이용하는 방법
+                mainHandler2.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        resultTxt.setText("\nMainHandler 왔어용 value : " + value);
+                    }
+                });
+            }
+        }
+    }
+
+    class MainHandler extends Handler {
+        @Override
+        public void handleMessage(@NonNull Message msg) {
+            super.handleMessage(msg);
+
+            Bundle bundle = msg.getData();
+            int value = bundle.getInt("value");
+            resultTxt.setText("\nMainHandler 왔어용 value : " + value);
+        }
+    }
 
     // Runnable ------------------------------------------------------------------------------------
     public static class MyRunnable implements Runnable {

@@ -12,6 +12,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.stegano.myjavaapplication.service.MyService;
+
 public class ForegroundServiceActivity extends AppCompatActivity {
     private static final String TAG = "ForegroundServiceActivity";
 

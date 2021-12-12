@@ -45,6 +45,8 @@ public class MainActivity extends BaseActivity {
     public Button nextActivityBtn6;
     public Button nextActivityBtn7;
     public Button nextActivityBtn8;
+    public Button nextActivityBtn9;
+    public Button nextActivityBtn10;
 
     public TextView resultTxt;
 
@@ -54,24 +56,8 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+
         Log.d(TAG, "onCreate() getWindow().addFlags()");
-
-        Timer timer = new Timer();
-        TimerTask timerTask = new TimerTask() {
-            @Override
-            public void run() {
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-                        Log.d(TAG, "onCreate() timerTask getWindow().clearFlags()");
-                    }
-                });
-
-            }
-        };
-        timer.schedule(timerTask, 30000);  // 300초 뒤 실행 -> 화면 꺼짐 가능
-
 
         setupEvents();
         setValues();
@@ -89,16 +75,33 @@ public class MainActivity extends BaseActivity {
 
     @Override
     void setupEvents() {
+        // 일정 시간 후에 화면 꺼지도록 설정
+        Timer timer = new Timer();
+        TimerTask timerTask = new TimerTask() {
+            @Override
+            public void run() {
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+                        Log.d(TAG, "onCreate() timerTask getWindow().clearFlags()");
+                    }
+                });
+
+            }
+        };
+        timer.schedule(timerTask, 30000);  // 300초 뒤 실행 -> 화면 꺼짐 가능
+
         // nextActivityBtn 버튼 클릭 시 TabLayoutAndViewPagerActivity 화면으로 이동
         nextActivityBtn = findViewById(R.id.nextActivityBtn);
         nextActivityBtn.setOnClickListener(v -> {
-            Intent intent = new Intent(mContext, TabLayoutAndViewPagerActivity.class);
+            Intent intent = new Intent(mContext, TestActivity.class);
             startActivity(intent);
         });
 
         nextActivityBtn2 = findViewById(R.id.nextActivityBtn2);
         nextActivityBtn2.setOnClickListener(v -> {
-            Intent intent = new Intent(mContext, TestActivity.class);
+            Intent intent = new Intent(mContext, TabLayoutAndViewPagerActivity.class);
             startActivity(intent);
         });
 
@@ -134,7 +137,19 @@ public class MainActivity extends BaseActivity {
 
         nextActivityBtn8 = findViewById(R.id.nextActivityBtn8);
         nextActivityBtn8.setOnClickListener(v -> {
-            Intent intent = new Intent(mContext, ThreadActivity.class);
+            Intent intent = new Intent(mContext, ReceiverActivity.class);
+            startActivity(intent);
+        });
+
+        nextActivityBtn9 = findViewById(R.id.nextActivityBtn9);
+        nextActivityBtn9.setOnClickListener(v -> {
+            Intent intent = new Intent(mContext, SocketActivity.class);
+            startActivity(intent);
+        });
+
+        nextActivityBtn10 = findViewById(R.id.nextActivityBtn10);
+        nextActivityBtn10.setOnClickListener(v -> {
+            Intent intent = new Intent(mContext, HTTPActivity.class);
             startActivity(intent);
         });
 
