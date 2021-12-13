@@ -47,6 +47,16 @@ public class MainActivity extends BaseActivity {
     public Button nextActivityBtn8;
     public Button nextActivityBtn9;
     public Button nextActivityBtn10;
+    public Button nextActivityBtn11;
+    public Button nextActivityBtn12;
+    public Button nextActivityBtn13;
+    public Button nextActivityBtn14;
+    public Button nextActivityBtn15;
+    public Button nextActivityBtn16;
+    public Button nextActivityBtn17;
+    public Button nextActivityBtn18;
+    public Button nextActivityBtn19;
+    public Button nextActivityBtn20;
 
     public TextView resultTxt;
 
@@ -55,7 +65,8 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);  // 화면켜짐 유지
 
         Log.d(TAG, "onCreate() getWindow().addFlags()");
 
@@ -87,7 +98,6 @@ public class MainActivity extends BaseActivity {
                         Log.d(TAG, "onCreate() timerTask getWindow().clearFlags()");
                     }
                 });
-
             }
         };
         timer.schedule(timerTask, 30000);  // 300초 뒤 실행 -> 화면 꺼짐 가능
@@ -150,6 +160,12 @@ public class MainActivity extends BaseActivity {
         nextActivityBtn10 = findViewById(R.id.nextActivityBtn10);
         nextActivityBtn10.setOnClickListener(v -> {
             Intent intent = new Intent(mContext, HTTPActivity.class);
+            startActivity(intent);
+        });
+
+        nextActivityBtn11 = findViewById(R.id.nextActivityBtn11);
+        nextActivityBtn11.setOnClickListener(v -> {
+            Intent intent = new Intent(mContext, LocationActivity.class);
             startActivity(intent);
         });
 

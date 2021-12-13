@@ -65,7 +65,7 @@ dependencies {
     implementation 'com.github.chrisbanes:PhotoView:2.3.0'  // Apache-2.0 License
     implementation 'com.github.bumptech.glide:glide:4.12.0'
     implementation 'androidx.recyclerview:recyclerview:1.2.1'  // 리사이클러뷰
-    implementation 'com.google.android.gms:play-services-maps:18.0.0'
+    implementation 'com.google.android.gms:play-services-maps:18.0.1'
     implementation "androidx.compose.ui:ui:$compose_version"
     implementation "androidx.compose.material:material:$compose_version"
     implementation "androidx.compose.ui:ui-tooling-preview:$compose_version"

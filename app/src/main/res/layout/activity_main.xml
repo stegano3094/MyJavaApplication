@@ -88,6 +88,13 @@
                 android:text="HTTP 화면으로"
                 android:textAllCaps="false" />
 
+            <Button
+                android:id="@+id/nextActivityBtn11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Location 화면으로"
+                android:textAllCaps="false" />
+
             <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

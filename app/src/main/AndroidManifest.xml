@@ -19,6 +19,9 @@
         android:theme="@style/Theme.MyJavaApplication"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".LocationActivity"
+            android:exported="false" />
+        <activity
             android:name=".HTTPActivity"
             android:exported="false" />
         <activity
