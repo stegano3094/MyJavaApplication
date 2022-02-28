@@ -26,9 +26,6 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.gun0912.tedpermission.PermissionListener;
 import com.gun0912.tedpermission.normal.TedPermission;
-import com.yanzhenjie.permission.Action;
-import com.yanzhenjie.permission.AndPermission;
-import com.yanzhenjie.permission.runtime.Permission;
 
 import java.util.List;
 
@@ -46,31 +43,13 @@ public class LocationActivity extends AppCompatActivity {
 //        <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 //        <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
-        // 테드퍼미션으로 권한 요청
-//        TedPermission.create()
-//                .setPermissionListener(permissionlistener)
-//                .setDeniedMessage("필요한 서비스입니다.")
-//                .setPermissions(Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION)
-//                .check();
 
-        // 얀첸지퍼미션
-        AndPermission.with(this)
-                .runtime()
-                .permission(Permission.ACCESS_FINE_LOCATION, Permission.ACCESS_COARSE_LOCATION)
-                .onGranted(new Action<List<String>>() {
-                    @Override
-                    public void onAction(List<String> data) {
-                        Toast.makeText(getApplicationContext(), "허용된 권한 개수 : " + data.size(), Toast.LENGTH_SHORT).show();
-                    }
-                })
-                .onDenied(new Action<List<String>>() {
-                    @Override
-                    public void onAction(List<String> data) {
-                        Toast.makeText(getApplicationContext(), "거부된 권한 개수 : " + data.size(), Toast.LENGTH_SHORT).show();
-                        finish();
-                    }
-                })
-                .start();
+        // 테드퍼미션으로 권한 요청
+        TedPermission.create()
+                .setPermissionListener(permissionlistener)
+                .setDeniedMessage("필요한 서비스입니다.")
+                .setPermissions(Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION)
+                .check();
 
         mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(new OnMapReadyCallback() {
@@ -103,18 +82,18 @@ public class LocationActivity extends AppCompatActivity {
     }
 
     // 권한 리스터 설정 (테드퍼미션)
-//    PermissionListener permissionlistener = new PermissionListener() {
-//        @Override
-//        public void onPermissionGranted() {  // 권한 승인하면 onPermissionGranted()가 호출됨
-//            Toast.makeText(getApplicationContext(), "Permission Granted", Toast.LENGTH_SHORT).show();
-//        }
-//
-//        @Override
-//        public void onPermissionDenied(List<String> deniedPermissions) {  // 권한 거절 시 호출됨
-//            Toast.makeText(getApplicationContext(), "Permission Denied\n" + deniedPermissions.toString(), Toast.LENGTH_SHORT).show();
-//            finish();
-//        }
-//    };
+    PermissionListener permissionlistener = new PermissionListener() {
+        @Override
+        public void onPermissionGranted() {  // 권한 승인하면 onPermissionGranted()가 호출됨
+            Toast.makeText(getApplicationContext(), "Permission Granted", Toast.LENGTH_SHORT).show();
+        }
+
+        @Override
+        public void onPermissionDenied(List<String> deniedPermissions) {  // 권한 거절 시 호출됨
+            Toast.makeText(getApplicationContext(), "Permission Denied\n" + deniedPermissions.toString(), Toast.LENGTH_SHORT).show();
+            finish();
+        }
+    };
 
     // 위치 매니저 객체 참조 (1단계)
     public void startLocationService() {

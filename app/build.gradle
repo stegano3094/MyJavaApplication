@@ -80,7 +80,6 @@ dependencies {
     implementation 'com.squareup.retrofit2:retrofit:2.9.0' // 레트로핏 설치 (필수)
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0' // 컨버터 (선택)
     implementation 'io.github.ParkSangGwon:tedpermission-normal:3.3.0'  // 테드 퍼미션
-    implementation 'com.yanzhenjie:permission:2.0.3'  //  Zhenjie Yan 퍼미션
 
 
     // 디폴트 라이브러리
